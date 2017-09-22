@@ -1,1 +1,1 @@
-# coc-gatech-newelba.github.io
+# NewElba Infrastructure - Alpha Release
