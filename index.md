@@ -1,5 +1,5 @@
 # We are doing cool things!
 
-[Alpha Release Tutorial](https://github.com/coc-gatech-newelba/NewElbaAlpha/wiki/Tutorial)
+[Current Tutorial](https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial-Alpha-Release)
 
-<a href="https://www.cc.gatech.edu/systems/projects/Elba/project.html">Elba Project site</a>
+[Elba Project](https://www.cc.gatech.edu/systems/projects/Elba/project.html)
