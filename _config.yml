@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-#theme: jekyll-theme-slate
-=======
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -31,7 +29,8 @@ github_username: --
 # Build settings
 name: coc-gatech-newelba.github.io
 markdown: kramdown
-theme: minima
+#theme: minima
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
@@ -48,4 +47,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
->>>>>>> newsite
