@@ -1,0 +1,64 @@
+---
+layout: post
+title: Data Processing and Management
+date: 2018-04-09 19:43:24.000000000 -04:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '16629091231'
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<h4>milliScope Data Flow and Architecture</h4>
+<p><img class="alignnone size-full wp-image-103" src="{{ site.baseurl }}/assets/screen-shot-2018-03-28-at-7-05-35-pm.png" alt="Screen Shot 2018-03-28 at 7.05.35 PM" width="868" height="373" /></p>
+<p>The data transformation flow of milliScope. The event mScopeMonitors capture<br />
+timestamps, as shown in Figure 4, in the component logs, while the resource mScopeMonitors record the system resource utilization. mScopeDataTranformer converts these unstructured data to structured tuples and loads them into a dynamic data warehouse, mScopeDB, for advanced analysis.</p>
+<h6>mScopeData Transformer Design</h6>
+<ul>
+<li style="list-style-type:none;">
+<ul>
+<li>Data pipeline transforms highly variable monitoring data into aggregates that are helpful in millibottleneck isolation and root cause analysis​</li>
+<li>These aggregates are:​
+<ul>
+<li>Point-in-Time Response Time​</li>
+<li>Queue Length​</li>
+<li>Downstream Service Time​</li>
+<li>Resource Consumption Descriptive Statistics​</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6>Other Parsers</h6>
+<p>&nbsp;</p>
+<ul>
+<li>Parsers – extract request-level data out of component logs.
+<ul>
+<li>ServiceTime – reads request-level data and calculates dst​</li>
+<li>Pointintime – reads request-level data (Apache) and calculated pit​</li>
+<li>Multifile – basically joins and aggregates data in uniform entities (dst_table, resource_table); pit is independent​</li>
+</ul>
+</li>
+<li>How to reconcile not ingesting XML into mScopeDataTransformer?​
+<ul>
+<li>Component parsers were supposed to output XML​</li>
+<li>Even if they were, we still need to calculate aggregates like queue lengths and dst​
+<ul>
+<li>Prob in database; the issue with this is trying to do the integration and calculation when the schemas change…​</li>
+<li>Or, compute aggregates externally and import​</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>

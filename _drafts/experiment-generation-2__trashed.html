@@ -1,0 +1,94 @@
+---
+layout: post
+title: Experiment Generation
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: trash
+categories: []
+tags: []
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '16629122800'
+  timeline_notification: '1523303077'
+  _wp_trash_meta_time: '1523457462'
+  _wp_trash_meta_status: publish
+  _wp_desired_post_slug: experiment-generation-2
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<p>Experimental artifacts like the scripts and software configuration are created dynamically by the code generation pipeline. This pipeline can be executed using the following commands, substituting the values for and as provided in Step 2:</p>
+<pre><code>ssh node1.
+cd /proj/Infosphere//common/rubbosMulini6
+</code></pre>
+<p>Finally, open <em>runRubbosExperiment.sh</em> and substituting with the specified values</p>
+<pre><code>BUILD_DIR = /proj/Infosphere/
+OUTPUT_HOME =  from Step2
+</code></pre>
+<p>The script can now be run with the following command where corresponds to the name of the Experiment XML file from Step 2:</p>
+<pre><code>./runRubbosExperiment.sh 
+</code></pre>
+<p>In the case of our running example, this should be:</p>
+<pre><code>./runRubbosExperiment.sh RUBBOS-1111-EMULAB-.xml
+</code></pre>
+<p><em>Important Notes</em>:</p>
+<ul>
+<li>Activating the experiment on <em>emulab</em>, ("swapping it in") and logging into node1 is not a <em>strict</em> dependency. Since the image and <em>emulab</em> environment already have the proper environment variables set, this step ensures consistency during experiment generation.</li>
+<li>The script should be run from a location that has the environment variable, JAVA_HOME, set. Nodes using the FC15RubOral image already have JAVA_HOME set. So, we recommend connecting to the Control node with <strong>ssh</strong> to execute this step.</li>
+<li>Sample Experiment XML files are available in the <code>/examples</code> directory in our <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">Github repository.</a></li>
+</ul>
+<h4>Code Generator Description</h4>
+<p>In general, our code generator is orchestrated by way of the <code>runRubbosExperiment.sh</code> script. This script calls a Java program, DeployScriptGenerator, which generates all of the necessary scripts and artifacts for executing an experiment in one of the supported infrastructures. The following describes the script more generally and the organization of the code generator source code:</p>
+<ol>
+<li>Code Generator Organization:
+<ul>
+<li>Base directory, <code>../common/rubbosMulini6</code>, contains the aforementioned script. It also acts as a reference point for executing the code generator and pipeline.</li>
+<li>Two sub-directories house the code generator source and base artifacts:
+<ul>
+<li><code>../rubbosMulini6/templates</code> - contains the XSL-based code templates that serve as a basis for the experiment scripts</li>
+<li><code>../rubbosMulini6/source</code> - contains the Java source code for the code generator</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parameter Descriptions. The <code>runRubbosExperiment.sh</code> script uses the following parameters in addition to those mentioned at the beginning of this Step. These might need to be altered depending on the environment used for generating experiments:
+<ul>
+<li>MULINI_DIR: specifies the base directory of the code generator, i.e. <code>../rubbosMulini6</code>from above</li>
+<li>EXP_DIR: specifies the path to Experiment XML files, i.e. the location for the filename specified as a command line parameter</li>
+</ul>
+</li>
+<li><em>Dependencies</em>:
+<ul>
+<li>Directories, <code>/templates</code> and <code>/source</code> need to be located in the same directory as the aforementioned script. Currently, all of these appear under <code>/common</code> in the source code repository under <code>/code_generator/</code></li>
+<li>Value of <code>OUTPUT_HOME</code> parameter used in this script needs to be the same as the value of the <code>OUTPUT_HOME</code> parameter specified in the referenced Experiment XML file</li>
+</ul>
+</li>
+</ol>
+<h4><a id="user-content-step-4-executing-the-experiment-on-emulab-cluster" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-4-executing-the-experiment-on-emulab-cluster"></a>Step 4: Executing the Experiment on Emulab cluster</h4>
+<p>Continuing with our example, perform the following preliminaries by substituting the values for parameters, and , as provided in Step 2:</p>
+<pre><code>ssh node1.  
+cd /scripts  
+</code></pre>
+<p>Finally, the experiment can be run by executing the ‘run.sh’ script with the following command:</p>
+<pre><code>./run.sh
+</code></pre>
+<p>While executing an experiment in this manner works, there a few downsides to executing an experiment this way. These limitations are:</p>
+<ul>
+<li>Error messages or standard output will not be captured for future analysis. This makes the verification that the experiment ran "correctly" rather difficult as debugging would require examining terminal-based output.</li>
+<li>Secondly, since this command is executed over an SSH session, it could timeout if the experiment execution time exceeds the default session timeout, causing an abrupt termination of the experiment prior to its natural completion. These problems are resolved by using the following, alternative method.</li>
+</ul>
+<p>Running experiments under a <code>screen</code> session mitigates these problems. [Ensure the Linux program <em>screen</em> is installed prior to executing an experiment with this method.] The Linux program, <em>screen</em>, enables scripts to be executed independent of an active <strong>ssh</strong> session. To run an experiment under <em>screen</em>, use the following:</p>
+<pre><code>./run_screen.sh
+</code></pre>
+<p>This script creates a new session, navigates to the experiment at the provided path, runs the experiment while storing the output, and detaches the screen from your current shell. The script also saves all output to a log file in the specified directory.</p>
+<p>To re-attach to the screen session, a user can run the following command and replacing with the <em>Experiment Name</em> value from Step 1:</p>
+<pre><code>screen –r </code></pre>
+<p><code><br />
+</code></p>

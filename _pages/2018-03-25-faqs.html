@@ -1,0 +1,54 @@
+---
+layout: page
+title: FAQs
+date: 2018-03-25 23:56:54.000000000 -04:00
+type: page
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _wp_page_template: ''
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<p>&nbsp;</p>
+<ol>
+<li>There are two primary ways of distributing required software for experiments:
+<ul>
+<li>custom images
+<ul>
+<li>create a custom image with the appropriate configuration and software pre-loaded</li>
+<li>use the location of the pre-loaded software in the image as the value for the SOFTWARE_HOME paramter in the Experiment XML</li>
+</ul>
+</li>
+<li>use the <code>\proj</code> mounted file share on <em>emulab</em> to copy files to and from experimental nodes. The following <a href="https://wiki.emulab.net/wiki/kb81" rel="nofollow">link</a> contains additional information about this share.</li>
+<li>Note: Several of the images on <em>emulab</em> and <em>PRObE (cmu)</em> associated with the <em>Infosphere</em> project already have fully mounted filesystems</li>
+</ul>
+</li>
+<li>Some users use package managers like <code>yum</code> to install software like <em>collectl</em>; however, not all enviornments provide sufficient network access for package managers like <code>yum</code></li>
+<li>Ensure tarball versions specified in the Experiment XML are available at the location SOFTWARE_HOME references. For example, some of the typical follies include:
+<ul>
+<li>Mysql 5.0.x instead of 5.5.x</li>
+<li>systat 7.x instead of systat 10.x</li>
+<li>Instrumted vs. Uninstrumented Rubbos benchmark files. Instrumented versions are prefixed with "CA-."</li>
+</ul>
+</li>
+<li>Some versions of operating systems do not support certain versions of monitoring tools (sysstat). For example, Fedora 15 does not support <em>systat 7.x</em></li>
+<li>Some of the software requires specific versions of Java
+<ul>
+<li>Asynchronous version of Rubbos benchmark in addition to our tracing infrastructure requires at least Java 7</li>
+<li>Previous versions of the JVM have been shown to introduce performance penalties. As such, an uninstrumented version of the benchmark <em><strong>should not</strong></em> be executed with any version prior to Java 6.</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>

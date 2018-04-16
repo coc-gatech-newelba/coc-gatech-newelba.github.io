@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Methodology and Data Analysis | Georgia Tech Elba Project</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Methodology and Data Analysis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Analysis Outline Explain your approach to data transformation, integration, and management. Detail how you use the data gathered to isolate millibottlenecks and diagnose their root cause. Describe the steps needed to analyze your experiment: Copy the tarball archive containing the experiment data to a location proximate to the cloned Elba Github repository. Unzip the copied archive. Navigate to the parsers directory of the cloned Elba Github repository. Execute &quot;runparsers.sh&quot; by providing the following: Path to the directory containing the unzipped archive Target location to store the processing results milliAnalyst Uniform data interface consisting of three entities:​ PointinTime ​ DownstreamServiceTime (DST)​ ResourceObservations​ Each of these entities can have a variable number of number of attributes ​ Experiment specification impacts this, i.e. the number of nodes determines the number of DST attributes​ Number of attributes can also depend on characteristics that might not be known prior to running an experiment, such as a node’s number of CPUs, cores, NICs or disks​ Method needs to handle this variable number of attributes, i.e. no fixed schemas​ Method needs to be able to integrate data across time and space​ Representation needs to be able to handle data anomalies and support efficient filtering and retrieval of small data subsets across all of the measurements​ Support graph-based reasoning​ milliBottlenecks Millibottlenecks happen in different system layers​ System software: Java garbage collection​ Processor architecture: DVFS​ Application Virtual Machine consolidation​ Though short-lived, millibottlenecks have big impact on n-tier application performance​ VLRT requests​ Queue amplification from n-tier system component dependencies​ Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis. VLRT requests (see (a)) caused by queue peaks in Apache (see (b)) when the system is at workload 9000 clients. Queue peaks in Apache (a) due to very short bottlenecks caused by Java GC in Tomcat (d). Solutions Three kinds of solutions for Latency Long Tail Problem​ Bug-fix, specific solutions for each cause (many causes, not all can be fixed)​ General solutions for transient bottlenecks (primarily improved queue management)​ Last-resort solution​ Bug-Fix for Specific Solutions Some cases can be “fixed”​ Java GC in JVM 1.5 was “fixed” in JVM 1.6​ DVFS anti-synchrony can be “fixed” by changing control periods (some complications)​ Other cases are harder to fix​ VM consolidation case (noisy neighbor) is really non-deterministic​ Kernel daemon processes (many)​ General Solutions Approaches that address transient bottlenecks (instead of specific “bugs”)​ 3 stages: (1) transient bottleneck formation, (2) queue amplification, (3) packet retransmission​ (1) Transient bottleneck detection and remedial action (e.g., disruption)​ Difficult, due to the short lifespan of transient bottlenecks​" />
+<meta property="og:description" content="Analysis Outline Explain your approach to data transformation, integration, and management. Detail how you use the data gathered to isolate millibottlenecks and diagnose their root cause. Describe the steps needed to analyze your experiment: Copy the tarball archive containing the experiment data to a location proximate to the cloned Elba Github repository. Unzip the copied archive. Navigate to the parsers directory of the cloned Elba Github repository. Execute &quot;runparsers.sh&quot; by providing the following: Path to the directory containing the unzipped archive Target location to store the processing results milliAnalyst Uniform data interface consisting of three entities:​ PointinTime ​ DownstreamServiceTime (DST)​ ResourceObservations​ Each of these entities can have a variable number of number of attributes ​ Experiment specification impacts this, i.e. the number of nodes determines the number of DST attributes​ Number of attributes can also depend on characteristics that might not be known prior to running an experiment, such as a node’s number of CPUs, cores, NICs or disks​ Method needs to handle this variable number of attributes, i.e. no fixed schemas​ Method needs to be able to integrate data across time and space​ Representation needs to be able to handle data anomalies and support efficient filtering and retrieval of small data subsets across all of the measurements​ Support graph-based reasoning​ milliBottlenecks Millibottlenecks happen in different system layers​ System software: Java garbage collection​ Processor architecture: DVFS​ Application Virtual Machine consolidation​ Though short-lived, millibottlenecks have big impact on n-tier application performance​ VLRT requests​ Queue amplification from n-tier system component dependencies​ Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis. VLRT requests (see (a)) caused by queue peaks in Apache (see (b)) when the system is at workload 9000 clients. Queue peaks in Apache (a) due to very short bottlenecks caused by Java GC in Tomcat (d). Solutions Three kinds of solutions for Latency Long Tail Problem​ Bug-fix, specific solutions for each cause (many causes, not all can be fixed)​ General solutions for transient bottlenecks (primarily improved queue management)​ Last-resort solution​ Bug-Fix for Specific Solutions Some cases can be “fixed”​ Java GC in JVM 1.5 was “fixed” in JVM 1.6​ DVFS anti-synchrony can be “fixed” by changing control periods (some complications)​ Other cases are harder to fix​ VM consolidation case (noisy neighbor) is really non-deterministic​ Kernel daemon processes (many)​ General Solutions Approaches that address transient bottlenecks (instead of specific “bugs”)​ 3 stages: (1) transient bottleneck formation, (2) queue amplification, (3) packet retransmission​ (1) Transient bottleneck detection and remedial action (e.g., disruption)​ Difficult, due to the short lifespan of transient bottlenecks​" />
+<link rel="canonical" href="http://localhost:4000/2018/04/09/methodology-and-data-analysis.html" />
+<meta property="og:url" content="http://localhost:4000/2018/04/09/methodology-and-data-analysis.html" />
+<meta property="og:site_name" content="Georgia Tech Elba Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-09T19:43:05-04:00" />
+<script type="application/ld+json">
+{"description":"Analysis Outline Explain your approach to data transformation, integration, and management. Detail how you use the data gathered to isolate millibottlenecks and diagnose their root cause. Describe the steps needed to analyze your experiment: Copy the tarball archive containing the experiment data to a location proximate to the cloned Elba Github repository. Unzip the copied archive. Navigate to the parsers directory of the cloned Elba Github repository. Execute &quot;runparsers.sh&quot; by providing the following: Path to the directory containing the unzipped archive Target location to store the processing results milliAnalyst Uniform data interface consisting of three entities:​ PointinTime ​ DownstreamServiceTime (DST)​ ResourceObservations​ Each of these entities can have a variable number of number of attributes ​ Experiment specification impacts this, i.e. the number of nodes determines the number of DST attributes​ Number of attributes can also depend on characteristics that might not be known prior to running an experiment, such as a node’s number of CPUs, cores, NICs or disks​ Method needs to handle this variable number of attributes, i.e. no fixed schemas​ Method needs to be able to integrate data across time and space​ Representation needs to be able to handle data anomalies and support efficient filtering and retrieval of small data subsets across all of the measurements​ Support graph-based reasoning​ milliBottlenecks Millibottlenecks happen in different system layers​ System software: Java garbage collection​ Processor architecture: DVFS​ Application Virtual Machine consolidation​ Though short-lived, millibottlenecks have big impact on n-tier application performance​ VLRT requests​ Queue amplification from n-tier system component dependencies​ Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis. VLRT requests (see (a)) caused by queue peaks in Apache (see (b)) when the system is at workload 9000 clients. Queue peaks in Apache (a) due to very short bottlenecks caused by Java GC in Tomcat (d). Solutions Three kinds of solutions for Latency Long Tail Problem​ Bug-fix, specific solutions for each cause (many causes, not all can be fixed)​ General solutions for transient bottlenecks (primarily improved queue management)​ Last-resort solution​ Bug-Fix for Specific Solutions Some cases can be “fixed”​ Java GC in JVM 1.5 was “fixed” in JVM 1.6​ DVFS anti-synchrony can be “fixed” by changing control periods (some complications)​ Other cases are harder to fix​ VM consolidation case (noisy neighbor) is really non-deterministic​ Kernel daemon processes (many)​ General Solutions Approaches that address transient bottlenecks (instead of specific “bugs”)​ 3 stages: (1) transient bottleneck formation, (2) queue amplification, (3) packet retransmission​ (1) Transient bottleneck detection and remedial action (e.g., disruption)​ Difficult, due to the short lifespan of transient bottlenecks​","url":"http://localhost:4000/2018/04/09/methodology-and-data-analysis.html","headline":"Methodology and Data Analysis","dateModified":"2018-04-09T19:43:05-04:00","datePublished":"2018-04-09T19:43:05-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/04/09/methodology-and-data-analysis.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Georgia Tech Elba Project" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Georgia Tech Elba Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Methodology and Data Analysis</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-04-09T19:43:05-04:00" itemprop="datePublished">Apr 9, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"login"=>"gtelbaproject", "email"=>"gt.elba.project@gmail.com", "display_name"=>"GT Elba Project", "first_name"=>"GT Elba", "last_name"=>"Project"}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h4>Analysis Outline</h4>
+<ol>
+<li>Explain your approach to data transformation, integration, and management.</li>
+<li>Detail how you use the data gathered to isolate millibottlenecks and diagnose their root cause.</li>
+<li>Describe the steps needed to analyze your experiment:
+<ol>
+<li>Copy the tarball archive containing the experiment data to a location proximate to the cloned Elba Github repository.</li>
+<li>Unzip the copied archive.</li>
+<li>Navigate to the parsers directory of the cloned Elba Github repository.</li>
+<li>Execute "runparsers.sh" by providing the following:
+<ol>
+<li>Path to the directory containing the unzipped archive</li>
+<li>Target location to store the processing results</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4>milliAnalyst</h4>
+<ul>
+<li>Uniform data interface consisting of three entities:​
+<ul>
+<li>PointinTime ​</li>
+<li>DownstreamServiceTime (DST)​</li>
+<li>ResourceObservations​</li>
+</ul>
+</li>
+<li>Each of these entities can have a variable number of number of attributes ​</li>
+<li>Experiment specification impacts this, i.e. the number of nodes determines the number of DST attributes​</li>
+<li>Number of attributes can also depend on characteristics that might not be known prior to running an experiment, such as a node’s number of CPUs, cores, NICs or disks​</li>
+<li>Method needs to handle this variable number of attributes, i.e. no fixed schemas​</li>
+<li>Method needs to be able to integrate data across time and space​</li>
+<li>Representation needs to be able to handle data anomalies and support efficient filtering and retrieval of small data subsets across all of the measurements​</li>
+<li>Support graph-based reasoning​</li>
+</ul>
+<h4>milliBottlenecks</h4>
+<ul>
+<li>Millibottlenecks happen in different system layers​
+<ul>
+<li>System software: Java garbage collection​</li>
+<li>Processor architecture: DVFS​</li>
+<li>Application Virtual Machine consolidation​</li>
+</ul>
+</li>
+<li>Though short-lived, millibottlenecks have big impact<b> </b>on n-tier application performance​
+<ul>
+<li>VLRT requests​</li>
+<li>Queue amplification from n-tier system component dependencies​</li>
+</ul>
+</li>
+</ul>
+<p><img class="alignnone size-full wp-image-104" src="/assets/screen-shot-2018-03-28-at-7-07-24-pm.png" alt="Screen Shot 2018-03-28 at 7.07.24 PM" width="818" height="434" /></p>
+<p>Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis.</p>
+<p><img class=" size-full wp-image-216 aligncenter" src="/assets/screen-shot-2018-04-10-at-12-39-26-pm.png" alt="Screen Shot 2018-04-10 at 12.39.26 PM" width="475" height="596" /></p>
+<ul>
+<li>VLRT requests (see (a)) caused by queue peaks in Apache (see (b)) when the system is at workload 9000 clients.</li>
+</ul>
+<p><img class="  wp-image-215 aligncenter" src="/assets/screen-shot-2018-04-10-at-12-39-49-pm.png" alt="Screen Shot 2018-04-10 at 12.39.49 PM" width="381" height="728" /></p>
+<ul>
+<li>Queue peaks in Apache (a) due to very short bottlenecks caused by Java GC in Tomcat (d).</li>
+</ul>
+<h4>Solutions</h4>
+<ul>
+<li>Three kinds of solutions for Latency Long Tail Problem​
+<ul>
+<li>Bug-fix, specific solutions for each cause (many causes, not all can be fixed)​</li>
+<li>General solutions for transient bottlenecks (primarily improved queue management)​</li>
+<li>Last-resort solution​</li>
+</ul>
+</li>
+<li>Bug-Fix for Specific Solutions
+<ul>
+<li>Some cases can be “fixed”​
+<ul>
+<li>Java GC in JVM 1.5 was “fixed” in JVM 1.6​</li>
+<li>DVFS anti-synchrony can be “fixed” by changing control periods (some complications)​</li>
+</ul>
+</li>
+<li>Other cases are harder to fix​
+<ul>
+<li>VM consolidation case (noisy neighbor) is really non-deterministic​</li>
+</ul>
+</li>
+<li>Kernel daemon processes (many)​</li>
+</ul>
+</li>
+<li>General Solutions
+<ul>
+<li>Approaches that address transient bottlenecks (instead of specific “bugs”)​
+<ul>
+<li>3 stages: (1) transient bottleneck formation, (2) queue amplification, (3) packet retransmission​</li>
+</ul>
+</li>
+<li>(1) Transient bottleneck detection and remedial action (e.g., disruption)​
+<ul>
+<li>Difficult, due to the short lifespan of transient bottlenecks​</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><a class="u-url" href="/2018/04/09/methodology-and-data-analysis.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Georgia Tech Elba Project</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Georgia Tech Elba Project</li><li><a class="u-email" href="mailto:elba@cc.gatech.edu">elba@cc.gatech.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/--"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">--</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The Georgia Tech Elba Project page contains a tutorial for how to install and deploy Project Elba&#39;s tools for conducting large scale system experiments Our tooling currently supports public cloud infastructures like PRObe and Emulab. We plan to support other infastructures like NSF Cloud and Chameleon in the coming months </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
