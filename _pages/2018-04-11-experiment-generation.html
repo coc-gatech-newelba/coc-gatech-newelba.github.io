@@ -1,0 +1,155 @@
+---
+layout: page
+title: Experiment Generation
+date: 2018-04-11 15:12:27.000000000 -04:00
+type: page
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _wp_page_template: ''
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<h4>Create experiment on Emulab cluster</h4>
+<p>Create a new experiment on Emulab by selecting the <i>Experimentation</i> drop down at the top of the website and select <i>Begin an Experiment.</i></p>
+<p>Fill out the the form accordingly.</p>
+<ul>
+<li>Make note of the <em><strong>Experiment Name</strong></em> you provide; this value will be needed later to generate the experiment's artifacts</li>
+<li><em>Naming Convention</em> for <em><strong>Experiment Name</strong></em> : use lowercase letters and/or numbers in the name, no spaces or special characters, including underscore ("_")</li>
+<li>This form also asks you to provide an <em>.NSFile</em></li>
+</ul>
+<p style="padding-left:30px;"><a class="button" href="https://gtelbatutorial.wordpress.com/nsfile">.NSFile Generation</a></p>
+<ul>
+<li>This input file specifies the network topology, machine types and OS images for the experiment</li>
+<li>Note: a sample .NSfile can be found <a href="https://gtelbatutorial.wordpress.com/nsfile/">here</a>.
+<ul>
+<li>To execute the 1-1-1-1 topology you can copy and paste the code given <a href="https://gtelbatutorial.wordpress.com/nsfile/">here</a> into a text editor. <em>Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. </em></li>
+</ul>
+</li>
+<li>For this example, the <em>.NSFile</em> needs to include 10 nodes, corresponding to: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.</li>
+</ul>
+<p><em>Comment: In this example, all of the nodes are on one local area network (LAN). This can be changed by including more LAN's in the specification and connecting the desired nodes to a particular LAN.</em></p>
+<p><em>Note: Node locations may be changed in the event that nodes of one group area all being used. Example: if all the d710 nodes are in use, pc3000 may be used instead. Please refer to "<a href="https://gtelbatutorial.wordpress.com/emulab-tips/">Emulab tips</a>" for how to view open nodes and other general Emulab related questions.</em></p>
+<h4><a id="user-content-step-2-describing-the-experiment-by-editingcompleting-experiment-xml" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-2-describing-the-experiment-by-editingcompleting-experiment-xml"></a>Describing the Experiment by editing/completing Experiment XML</h4>
+<p><a class="button" href="https://gtelbatutorial.wordpress.com/xml-configuration-parameters/">XML Parameters</a></p>
+<p>We use an XML file as a basis for generating all experiment artifacts. This XML file contains various environmental and experimental parameters, for example:</p>
+<ul>
+<li>username and groupname for executing the experiment</li>
+<li>workload, i.e. number of concurrent user requests</li>
+<li>number of nodes (servers) and the component software (application software) to install on each</li>
+<li>monitoring to activate</li>
+</ul>
+<p>In short, these parameters control the software, topology, workload and monitors used during the execution of a system experiment. As such, it functions as a de facto experiment specification.</p>
+<p>To begin, perform the following commands:</p>
+<pre><code>cd /proj/Infosphere//common/experiment_xml  
+cp RUBBOS-1111-EMULAB-DEFAULT.xml RUBBOS-1111-EMULAB-.xml  
+</code></pre>
+<p>Several default parameters need to be changed to execute our example:</p>
+<ul>
+<li><em>EMULAB_EXPERIMENT_NAME</em><br />
+Complete this value using the <strong><em>Experiment Name</em></strong> value from above (step 1) using the following format: <em>Experiment Name.infosphere.emulab.net</em></li>
+</ul>
+<ul>
+<li>For example, if the supplied value for Experiment Name during Step 1 was jkimball1112, then the value for this parameter would be: jkimball1112.infosphere.emulab.net</li>
+</ul>
+<pre><img class="alignnone  wp-image-228" src="{{ site.baseurl }}/assets/screen-shot-2018-04-10-at-2-32-55-pm.png" alt="Screen Shot 2018-04-10 at 2.32.55 PM" width="545" height="24" /></pre>
+<ul>
+<li>Output Directories
+<ul>
+<li>The following group of parameters direct where the experiment's scripts and output are copied.</li>
+<li>Complete these by providing the <em>Experiment Name</em> value from Step 1 and your Emulab account <em>username</em></li>
+</ul>
+</li>
+</ul>
+<p>[INSERT CODE HERE]</p>
+<ul>
+<li><em>Username: </em>Complete using your Emulab account username</li>
+</ul>
+<p><img class="alignnone  wp-image-230" src="{{ site.baseurl }}/assets/screen-shot-2018-04-10-at-2-37-35-pm.png" alt="Screen Shot 2018-04-10 at 2.37.35 PM" width="393" height="26" /></p>
+<ul>
+<li>Monitors: Set the following monitor parameters to <em>false</em></li>
+</ul>
+<p><img class="alignnone  wp-image-231" src="{{ site.baseurl }}/assets/screen-shot-2018-04-10-at-2-38-20-pm.png" alt="Screen Shot 2018-04-10 at 2.38.20 PM" width="401" height="94" /></p>
+<ul>
+<li>Workloads
+<ul>
+<li>This example experiment uses workloads ranging from 1000 to 7000 concurrent requests</li>
+<li>Lines like the one below can be modified by either changing the corresponding value or commenting out the line entirely</li>
+</ul>
+</li>
+</ul>
+<p><img class="alignnone  wp-image-232" src="{{ site.baseurl }}/assets/screen-shot-2018-04-10-at-2-38-46-pm.png" alt="Screen Shot 2018-04-10 at 2.38.46 PM" width="349" height="20" /></p>
+<p><em>Important Notes</em></p>
+<ul>
+<li>mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.</li>
+<li>This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the <a href="https://gtelbatutorial.wordpress.com/xml-configuration-parameters/">XML Configuration Parameters</a>.</li>
+<li>In the case of errors using the "open" command, refer to the following webpage on how to use vim: click <a href="https://cs88-website.github.io/articles/vim.html#opening-files">here</a>.
+<ul>
+<li>You also have the option of editing the file locally and using scp command to transfer the file back to the server.</li>
+</ul>
+</li>
+</ul>
+<h4>Generate Experiment Scripts and Configuration using Experiment XML</h4>
+<p>Experimental artifacts like the scripts and software configuration are created dynamically by the code generation pipeline. This pipeline can be executed using the following commands, substituting the values for and as provided in Step 2:</p>
+<pre><code>ssh node1.
+cd /proj/Infosphere//common/rubbosMulini6
+</code></pre>
+<p>Finally, open <em>runRubbosExperiment.sh</em> and substituting with the specified values</p>
+<pre><code>BUILD_DIR = /proj/Infosphere/
+OUTPUT_HOME =  from Step2
+</code></pre>
+<p>The script can now be run with the following command where corresponds to the name of the Experiment XML file from Step 2:</p>
+<pre><code>./runRubbosExperiment.sh 
+</code></pre>
+<p>In the case of our running example, this should be:</p>
+<pre><code>./runRubbosExperiment.sh RUBBOS-1111-EMULAB-.xml
+</code></pre>
+<p><em>Important Notes</em>:</p>
+<ul>
+<li>Activating the experiment on <em>emulab</em>, ("swapping it in") and logging into node1 is not a <em>strict</em> dependency. Since the image and <em>emulab</em> environment already have the proper environment variables set, this step ensures consistency during experiment generation.
+<ul>
+<li>For clear instructions on how to “swap in” your experiment on Emulab, and other important details, please refer to ‘Emulab Tips’</li>
+</ul>
+</li>
+<li>The script should be run from a location that has the environment variable, JAVA_HOME, set. Nodes using the FC15RubOral image already have JAVA_HOME set. So, we recommend connecting to the Control node with <strong>ssh</strong> to execute this step.</li>
+<li>Sample Experiment XML files are available in the <code>/examples</code> directory in our <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">Github repository.</a></li>
+</ul>
+<h4>Code Generator Description</h4>
+<p>In general, our code generator is orchestrated by way of the <code>runRubbosExperiment.sh</code> script. This script calls a Java program, DeployScriptGenerator, which generates all of the necessary scripts and artifacts for executing an experiment in one of the supported infrastructures. The following describes the script more generally and the organization of the code generator source code:</p>
+<ol>
+<li>Code Generator Organization:
+<ul>
+<li>Base directory, <code>../common/rubbosMulini6</code>, contains the aforementioned script. It also acts as a reference point for executing the code generator and pipeline.</li>
+<li>Two sub-directories house the code generator source and base artifacts:
+<ul>
+<li><code>../rubbosMulini6/templates</code> - contains the XSL-based code templates that serve as a basis for the experiment scripts</li>
+<li><code>../rubbosMulini6/source</code> - contains the Java source code for the code generator</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parameter Descriptions. The <code>runRubbosExperiment.sh</code> script uses the following parameters in addition to those mentioned at the beginning of this Step. These might need to be altered depending on the environment used for generating experiments:
+<ul>
+<li>MULINI_DIR: specifies the base directory of the code generator, i.e. <code>../rubbosMulini6</code>from above</li>
+<li>EXP_DIR: specifies the path to Experiment XML files, i.e. the location for the filename specified as a command line parameter</li>
+</ul>
+</li>
+<li><em>Dependencies</em>:
+<ul>
+<li>Directories, <code>/templates</code> and <code>/source</code> need to be located in the same directory as the aforementioned script. Currently, all of these appear under <code>/common</code> in the source code repository under <code>/code_generator/</code></li>
+<li>Value of <code>OUTPUT_HOME</code> parameter used in this script needs to be the same as the value of the <code>OUTPUT_HOME</code> parameter specified in the referenced Experiment XML file</li>
+</ul>
+</li>
+</ol>
+<h4><a href="https://gtelbatutorial.wordpress.com/faqs/">FAQ and Best Practices</a></h4>

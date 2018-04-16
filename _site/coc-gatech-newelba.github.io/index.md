@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 # We are doing cool things!
 
 [Current Tutorial](https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&-Experiment-Execution-(alpha))
 
 [Elba Project](https://www.cc.gatech.edu/systems/projects/Elba/project.html)
-=======
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
----
->>>>>>> newsite

@@ -1,0 +1,310 @@
+---
+layout: post
+title: Tutorial
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: trash
+categories: []
+tags: []
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '16467448619'
+  timeline_notification: '1522876224'
+  _wp_trash_meta_status: publish
+  _wp_trash_meta_time: '1523303117'
+  _wp_desired_post_slug: tutorial
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<ol>
+<li> Create account on the Emulab cloud infrastructure at <a href="http://www.emulab.net/index.php3"><i>emulab.net</i></a> and wait for approval<img class="alignnone size-full wp-image-43" src="{{ site.baseurl }}/assets/emulabelba.png" alt="EmulabElba" width="1776" height="1125" /></li>
+<li>Once approved for an account fill out your information- make note of the following two points:
+<ol>
+<li>When filling out information for your account ensure that you put “Infosphere” for both the group AND the project</li>
+<li>Select <b>bash </b>under the shell portion
+<ol>
+<li>Please note: if you forget, this can be set after logging into Emulab and clicking the “Edit Profile” link</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Create a public RSA (SSH) key on your local ‘nix machine under a <b>bash</b> shell.</li>
+</ol>
+<p><a class="button" href="https://gtelbatutorial.wordpress.com/2018/02/22/ssh">SSH Generation</a></p>
+<p>4. Add the SSH key to your account by selecting “My Account” and then “Edit SSH keys” on the left hand side of the page.  This is where you would paste your SSH key from the prior step.</p>
+<p>5. Email Josh Kimball with your GitHub username to gain access into the GitHub repository</p>
+<ol>
+<li>Josh Kimball email address: <a href="mailto:Elba@cc.gatech.edu">Elba@cc.gatech.edu</a></li>
+<li>If you are unfamiliar with GitHub, please create an account at GitHub.com</li>
+</ol>
+<p>6. Using your computer terminal, create a directory on Emulab’s file share, users.emulab.net, by executing the following commands:</p>
+<ol>
+<li style="list-style-type:none;">
+<ol>
+<li>Please note: substitute for your Emulab account username
+<ol>
+<li>Example: <a href="mailto:JaneDoe@users.emulab.net">JaneDoe@users.emulab.net</a></li>
+</ol>
+</li>
+<li>ssh JaneDoe@users.emulab.net<br />
+cd /proj/Infosphere<br />
+mkdir JaneDoe<img class="alignnone size-full wp-image-45" src="{{ site.baseurl }}/assets/screenshot2lineartutorial.png" alt="Screenshot2LinearTutorial" width="1038" height="736" /></li>
+</ol>
+</li>
+</ol>
+<p>7. Use the following webpage to clone the ‘Alpha release of Project NewElba’ into your directory: <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">https://github.com/coc-gatech-newelba/NewElbaAlpha.git</a></p>
+<p><i>NOTE: if you do not gain permission from Josh Kimball, you will not be able to access this page.</i></p>
+<ol>
+<li>In your terminal, enter the directory where you would like to copy the repository
+<ol>
+<li>cd ~/</li>
+</ol>
+</li>
+<li>Clone the repository by executing the following code
+<ol>
+<li>git clone <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">https://github.com/coc-gatech-newelba/NewElbaAlpha.git</a>
+<ol>
+<li>After executing this command, you will be asked to provide your GitHub username and password, so please have this information on hand when going through this step</li>
+<li>(insert March 1.1 screenshot)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Navigate into the directory of the repository you just created and replace with the repository’s name (NewElbaAlpha)
+<ol>
+<li>cd NewElbaAlpha</li>
+</ol>
+</li>
+<li>Type:
+<ol>
+<li>git status</li>
+<li>You should see this:<img class="alignnone size-full wp-image-47" src="{{ site.baseurl }}/assets/screenshot3lineartutorial.png" alt="Screenshot3LinearTutorial" width="1033" height="226" /></li>
+</ol>
+</li>
+</ol>
+<ol>
+<li>Next, execute the following commands:
+<ol>
+<li>cd /proj/Infosphere/</li>
+<li>cp -r ./NewElbaAlpha/generator/common /proj/Infosphere/</li>
+<li>mkdir -p /proj/Infosphere//rubbos/rubbos_yasu</li>
+<li>tar -zxvf ./NewElbaAlpha/generator/shared_files.tar.gz --directory=/proj/Infosphere//rubbos/rubbos_yasu</li>
+<li>mkdir -p /proj/Infosphere//softwares/data</li>
+<li>cp -r ./NewElbaAlpha/mScopeEventMonitors /proj/Infosphere//softwares</li>
+<li>cp -r ./NewElbaAlpha/mScopeResourceMonitors /proj/Infosphere//softwares</li>
+<li>cp /proj/Infosphere/shared_software/rubbos_orig_data.tar.gz /proj/Infosphere//softwares/data</li>
+<li>Your terminal should look like the following:</li>
+</ol>
+</li>
+</ol>
+<p><img class="alignnone size-full wp-image-50" src="{{ site.baseurl }}/assets/screenshot4tutorial.png" alt="Screenshot4Tutorial" width="1798" height="851" /></p>
+<h4><img class="alignnone size-full wp-image-49" src="{{ site.baseurl }}/assets/screenshot5tutorial.png" alt="Screenshot5Tutorial" width="1892" height="826" /></h4>
+<h4><a href="https://gtelbatutorial.wordpress.com/experiment-customization/">Experiment Description</a></h4>
+<p>Follow this <a href="https://gtelbatutorial.wordpress.com/experiment-customization/">link</a> if you want to execute an experiment other than the topology 1-1-1-1.</p>
+<p>The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is modeled after a commercial web-based bulletin board system, SlashDot. The benchmark natively supports Read-only and Read-Write workloads, and it enables users to specify the workload in terms of the number of concurrent client requests. For this tutorial, we will use workloads ranging from 1000 to 7000. This example experiment features a system topology composed of:</p>
+<ul>
+<li>1 Apache HTTP server</li>
+<li>1 Tomcat Application server</li>
+<li>1 CJDBC Middleware server</li>
+<li>1 MySQL DB server</li>
+</ul>
+<p>Note: we generally refer to this as a <a href="https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/">1-1-1-1 topology</a> where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.</p>
+<p>[googleapps domain="drive" dir="file/d/0ByvytIe8I-qpbDhDV1ZPU0RjcVU/preview" query="" width="640" height="480" /]</p>
+<p><em>Note: The video above takes you through executing an experiment. However, the most up to date information is listed below so put precedence on the below instructions and use the video as support.</em></p>
+<h4><a id="user-content-experiment-creation" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#experiment-creation"></a>Experiment Creation</h4>
+<p>To increase the efficiency and speed of cloud-based systems research, we rely on code generation techniques to create experiments. Before generating artifacts such as installation scripts and configuration, a "reservation" needs to be created on one of the supported public clouds. In addition, the experiment configuration needs to be supplied to the generator. The following two steps accomplish these tasks while the final step outputs the necessary experimental artifacts for running the desired experiment on the public cloud.</p>
+<h4><a id="user-content-step-1-create-experiment-on-emulab-cluster" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-1-create-experiment-on-emulab-cluster"></a>Step 1: Create experiment on Emulab cluster</h4>
+<ol>
+<li>Create a new experiment on Emulab by selecting the <i>Experimentation</i> drop down at the top of the website and select <i>Begin an Experiment</i></li>
+<li>Fill out the the form accordingly.
+<ul>
+<li>Make note of the <em><strong>Experiment Name</strong></em> you provide; this value will be needed later to generate the experiment's artifacts</li>
+<li><em>Naming Convention</em> for <em><strong>Experiment Name</strong></em> : use lowercase letters and/or numbers in the name, no spaces or special characters, including underscore ("_")</li>
+</ul>
+</li>
+<li>This form also asks you to provide an <em>.NSFile</em><a class="button" href="https://gtelbatutorial.wordpress.com/nsfile">.NSFile Generation</a>
+<ul>
+<li>This input file specifies the network topology, machine types and OS images for the experiment</li>
+<li>Note: a sample .NSfile can be found <a href="https://gtelbatutorial.wordpress.com/nsfile/">here</a>.
+<ul>
+<li>To execute the 1-1-1-1 topology you can copy and paste the code given <a href="https://gtelbatutorial.wordpress.com/nsfile/">here</a> into a text editor. <em>Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. </em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For this example, the <em>.NSFile</em> needs to include 10 nodes, corresponding to: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.</li>
+</ol>
+<p>Comment: In this example, all of the nodes are on one local area network (LAN). This can be changed by including more LAN's in the specification and connecting the desired nodes to a particular LAN.</p>
+<h4><a id="user-content-step-2-describing-the-experiment-by-editingcompleting-experiment-xml" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-2-describing-the-experiment-by-editingcompleting-experiment-xml"></a>Step 2: Describing the Experiment by editing/completing Experiment XML</h4>
+<p><a class="button" href="https://gtelbatutorial.wordpress.com/xml-configuration-parameters/">XML Parameters</a></p>
+<p>We use an XML file as a basis for generating all experiment artifacts. This XML file contains various environmental and experimental parameters, for example:</p>
+<ol>
+<li>username and groupname for executing the experiment</li>
+<li>workload, i.e. number of concurrent user requests</li>
+<li>number of nodes (servers) and the component software (application software) to install on each</li>
+<li>monitoring to activate</li>
+</ol>
+<p>In short, these parameters control the software, topology, workload and monitors used during the execution of a system experiment. As such, it functions as a de facto experiment specification.</p>
+<p>To begin, perform the following commands:</p>
+<pre><code>cd /proj/Infosphere//common/experiment_xml  
+cp RUBBOS-1111-EMULAB-DEFAULT.xml RUBBOS-1111-EMULAB-.xml  
+</code></pre>
+<p>Several default parameters need to be changed to execute our example:</p>
+<ul>
+<li><em>EMULAB_EXPERIMENT_NAME</em><br />
+Complete this value using the <strong><em>Experiment Name</em></strong> value from above (step 1) using the following format: <em>Experiment Name.infosphere.emulab.net</em></p>
+<ul>
+<li>For example, if the supplied value for Experiment Name during Step 1 was jkimball1112, then the value for this parameter would be: jkimball1112.infosphere.emulab.net</li>
+</ul>
+</li>
+<li>Output Directories
+<ul>
+<li>The following group of parameters direct where the experiment's scripts and output are copied.</li>
+<li>Complete these by providing the <em>Experiment Name</em> value from Step 1 and your Emulab account <em>username</em></li>
+</ul>
+</li>
+</ul>
+<pre><code> /rubbos/rubbos_yasu"/&gt;/rubbos/ rubbos_yasu/"/&gt;@users.emulab.net"/&gt;/results"/&gt;  </code></pre>
+<ul>
+<li><em>Username: </em>Complete using your Emulab account username</li>
+</ul>
+<p><code>  "/&gt;  </code></p>
+<ul>
+<li>Monitors: Set the following monitor parameters to <em>false</em></li>
+</ul>
+<pre><code>  
+  
+  
+  </code></pre>
+<ul>
+<li>Workloads
+<ul>
+<li>This example experiment uses workloads ranging from 1000 to 7000 concurrent requests.</li>
+</ul>
+<ul>
+<li>Lines like the one below can be modified by either changing the corresponding value or commenting out the line entirely</li>
+</ul>
+</li>
+</ul>
+<p><em>Important Notes</em></p>
+<ul>
+<li>mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.</li>
+<li>This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the <a href="https://gtelbatutorial.wordpress.com/xml-configuration-parameters/">XML Configuration Parameters</a>.</li>
+</ul>
+<h4><a id="user-content-step-3-generate-experiment-scripts-and-configuration-using-experiment-xml" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-3-generate-experiment-scripts-and-configuration-using-experiment-xml"></a>Step 3: Generate Experiment Scripts and Configuration using Experiment XML</h4>
+<p>Experimental artifacts like the scripts and software configuration are created dynamically by the code generation pipeline. This pipeline can be executed using the following commands, substituting the values for and as provided in Step 2:</p>
+<ul>
+<li><code>ssh node1.</code></li>
+<li><code>cd /proj/Infosphere//common/rubbosMulini6<br />
+</code></li>
+</ul>
+<p>Finally, open <em>runRubbosExperiment.sh</em> and substituting with the specified values</p>
+<ul>
+<li><code>BUILD_DIR = /proj/Infosphere/</code></li>
+<li><code> OUTPUT_HOME =  from Step2<br />
+</code></li>
+</ul>
+<p>The script can now be run with the following command where corresponds to the name of the Experiment XML file from Step 2:</p>
+<ul>
+<li><code>./runRubbosExperiment.sh </code></li>
+</ul>
+<p>In the case of our running example, this should be:</p>
+<ul>
+<li><code>./runRubbosExperiment.sh RUBBOS-1111-EMULAB-.xml<br />
+</code></li>
+</ul>
+<p><em>Important Notes</em>:</p>
+<ul>
+<li>Activating the experiment on <em>emulab</em>, ("swapping it in") and logging into node1 is not a <em>strict</em> dependency. Since the image and <em>emulab</em> environment already have the proper environment variables set, this step ensures consistency during experiment generation.</li>
+<li>The script should be run from a location that has the environment variable, JAVA_HOME, set. Nodes using the FC15RubOral image already have JAVA_HOME set. So, we recommend connecting to the Control node with <strong>ssh</strong> to execute this step.</li>
+<li>[jk] Double check whether this can run with a different JAVA version or if it needs to be Java 1.4</li>
+<li>Sample Experiment XML files are available in the <code>/examples</code> directory in our <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">Github repository.</a></li>
+</ul>
+<h4>Code Generator Description</h4>
+<p>In general, our code generator is orchestrated by way of the <code>runRubbosExperiment.sh</code> script. This script calls a Java program, DeployScriptGenerator, which generates all of the necessary scripts and artifacts for executing an experiment in one of the supported infrastructures. The following describes the script more generally and the organization of the code generator source code:</p>
+<ol>
+<li>Code Generator Organization:
+<ul>
+<li>Base directory, <code>../common/rubbosMulini6</code>, contains the aforementioned script. It also acts as a reference point for executing the code generator and pipeline.</li>
+<li>Two sub-directories house the code generator source and base artifacts:
+<ul>
+<li><code>../rubbosMulini6/templates</code> - contains the XSL-based code templates that serve as a basis for the experiment scripts</li>
+<li><code>../rubbosMulini6/source</code> - contains the Java source code for the code generator</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parameter Descriptions. The <code>runRubbosExperiment.sh</code> script uses the following parameters in addition to those mentioned at the beginning of this Step. These might need to be altered depending on the environment used for generating experiments:
+<ul>
+<li>MULINI_DIR: specifies the base directory of the code generator, i.e. <code>../rubbosMulini6</code>from above</li>
+<li>EXP_DIR: specifies the path to Experiment XML files, i.e. the location for the filename specified as a command line parameter</li>
+</ul>
+</li>
+<li><em>Dependencies</em>:
+<ul>
+<li>Directories, <code>/templates</code> and <code>/source</code> need to be located in the same directory as the aforementioned script. Currently, all of these appear under <code>/common</code> in the source code repository under <code>/code_generator/</code></li>
+<li>Value of <code>OUTPUT_HOME</code> parameter used in this script needs to be the same as the value of the <code>OUTPUT_HOME</code> parameter specified in the referenced Experiment XML file</li>
+</ul>
+</li>
+</ol>
+<h4><a id="user-content-step-4-executing-the-experiment-on-emulab-cluster" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#step-4-executing-the-experiment-on-emulab-cluster"></a>Step 4: Executing the Experiment on Emulab cluster</h4>
+<p>Continuing with our example, perform the following preliminaries by substituting the values for parameters, and , as provided in Step 2:</p>
+<ul>
+<li><code>ssh node1. </code></li>
+<li><code><br />
+cd /scripts<br />
+</code></li>
+</ul>
+<p>Finally, the experiment can be run by executing the ‘run.sh’ script with the following command:</p>
+<ul>
+<li><code>./run.sh<br />
+</code></li>
+</ul>
+<p>While executing an experiment in this manner works, there a few downsides to executing an experiment this way. These limitations are:</p>
+<ul>
+<li>Error messages or standard output will not be captured for future analysis. This makes the verification that the experiment ran "correctly" rather difficult as debugging would require examining terminal-based output.</li>
+<li>Secondly, since this command is executed over an SSH session, it could timeout if the experiment execution time exceeds the default session timeout, causing an abrupt termination of the experiment prior to its natural completion. These problems are resolved by using the following, alternative method.</li>
+</ul>
+<p>Running experiments under a <code>screen</code> session mitigates these problems. [Ensure the Linux program <em>screen</em> is installed prior to executing an experiment with this method.] The Linux program, <em>screen</em>, enables scripts to be executed independent of an active <strong>ssh</strong> session. To run an experiment under <em>screen</em>, use the following:</p>
+<ul>
+<li><code>./run_screen.sh<br />
+</code></li>
+</ul>
+<p>This script creates a new session, navigates to the experiment at the provided path, runs the experiment while storing the output, and detaches the screen from your current shell. The script also saves all output to a log file in the specified directory.</p>
+<p>To re-attach to the screen session, a user can run the following command and replacing with the <em>Experiment Name</em> value from Step 1:</p>
+<ul>
+<li><code>screen –r<br />
+</code></li>
+</ul>
+<h4><a id="user-content-experiment-organization" class="anchor" href="https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&amp;-Experiment-Execution-(alpha)#experiment-organization"></a>Experiment Organization</h4>
+<p>In general, every generated experiment adheres to a canonical structure.</p>
+<pre><code>/proj/infosphere//rubbos/rubbos_yasu/  
+</code></pre>
+<ul>
+<li style="list-style-type:none;">
+<ul>
+<li>is the top-level directory that holds all of the generated experiment artifacts. In fact, this line corresponds to the value supplied for the <em>OUTPUT_HOME</em> parameter in the Experiment XML</li>
+<li>This acts as a de facto reference point for many other scripts during the installation and configuration of the environment's nodes and benchmark</li>
+<li>It must be accessible to the environment where the experiment will be run, so the associated scripts and configuration can be executed</li>
+<li><em>Shared Structures.</em> There are several <em>shared directories</em>, i.e. all experiments reference these directories and must exist under <code>../rubbos_yasu</code>, i.e. in the context of OUTPUT_HOME, these structures must be at the same level in the path as the . These directories are:
+<ul>
+<li>emulab_files: file system configuration for <code>fdisk</code></li>
+<li>tomcat_files: standard startup and shutdown scripts</li>
+<li>apache_files: static html files for the benchmark</li>
+<li>rubbos_files: benchmark source code for the Client generator and Application logic (Servlets)</li>
+<li><em>Note: There can be others such as postgres_files and a directory for marmot; however, these are only necessary for running experiments with postgres DBMS and the PRObE cloud respectively.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4><a href="https://gtelbatutorial.wordpress.com/faqs/">FAQ and Best Practices</a></h4>
+<p>&nbsp;</p>

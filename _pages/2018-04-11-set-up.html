@@ -1,0 +1,97 @@
+---
+layout: page
+title: Set-Up
+date: 2018-04-11 15:12:02.000000000 -04:00
+type: page
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _wp_page_template: ''
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<p>Create account on the Emulab cloud infrastructure at <a href="http://www.emulab.net/index.php3"><i>emulab.net</i></a> and wait for approval</p>
+<p>Once approved for an account fill out your information- make note of the following two points:</p>
+<ul>
+<li>When filling out information for your account ensure that you put “Infosphere” for both the group AND the project
+<ul>
+<li style="list-style-type:none;">
+<ul>
+<li>Please note: if you forget, this can be set after logging into Emulab and clicking the “Edit Profile” link</li>
+<li>Select <b>bash </b>under the shell portion</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a class="button" href="https://gtelbatutorial.wordpress.com/2018/02/22/ssh">SSH Generation</a></p>
+<p>Create a public RSA (SSH) key on your local ‘nix machine under a <b>bash</b> shell.</p>
+<p>Add the SSH key to your account by selecting “My Account” and then “Edit SSH keys” on the left hand side of the page.  This is where you would paste your SSH key from the prior step.</p>
+<p>Email Josh Kimball with your GitHub username to gain access into the GitHub repository</p>
+<ul>
+<li>Elba email address: <a href="mailto:Elba@cc.gatech.edu">Elba@cc.gatech.edu</a></li>
+<li>If you are unfamiliar with GitHub, please create an account at GitHub.com</li>
+</ul>
+<p>Using your computer terminal, create a directory on Emulab’s file share, users.emulab.net, by executing the following commands:</p>
+<ul>
+<li style="list-style-type:none;">
+<ul>
+<li>Please note: substitute for your Emulab account username
+<ul>
+<li>Example: JaneDoe@users.emulab.net</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>ssh @users.emulab.net  
+ cd /proj/Infosphere  
+ mkdir  
+</code></pre>
+<p>Use the following webpage to clone the ‘Alpha release of Project NewElba’ into your directory: <a href="https://github.com/coc-gatech-newelba/NewElbaAlpha.git">https://github.com/coc-gatech-newelba/NewElbaAlpha.git</a></p>
+<p><i>NOTE: if you do not gain permission from Josh Kimball, you will not be able to access this page.</i></p>
+<p>In your terminal, enter the directory where you would like to copy the repository</p>
+<pre><code>cd ~/
+</code></pre>
+<p>Clone the repository from https://github.com/coc-gatech-newelba/NewElbaAlpha.git</p>
+<p>Navigate into the directory of the repository you just created and replace with the repository’s name (NewElbaAlpha)</p>
+<p><code>cd NewElba Alpha</code></p>
+<p>Type:</p>
+<ul>
+<li>git status</li>
+<li>You should see this:</li>
+</ul>
+<p>Next, execute the following commands:</p>
+<pre><code>cd /proj/Infosphere/  
+cp -r ./NewElbaAlpha/generator/common /proj/Infosphere/  
+mkdir -p /proj/Infosphere//rubbos/rubbos_yasu  
+tar -zxvf ./NewElbaAlpha/generator/shared_files.tar.gz --directory=/proj/Infosphere//rubbos/rubbos_yasu  
+mkdir -p /proj/Infosphere//softwares/data  
+cp -r ./NewElbaAlpha/mScopeEventMonitors /proj/Infosphere//softwares  
+cp -r ./NewElbaAlpha/mScopeResourceMonitors /proj/Infosphere//softwares   
+cp /proj/Infosphere/shared_software/rubbos_orig_data.tar.gz /proj/Infosphere//softwares/data  
+</code></pre>
+<h4><a href="https://gtelbatutorial.wordpress.com/experiment-customization/">Experiment Description</a></h4>
+<p>Follow this <a href="https://gtelbatutorial.wordpress.com/experiment-customization/">link</a> if you want to execute an experiment other than the topology 1-1-1-1.</p>
+<p>The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is modeled after a commercial web-based bulletin board system, SlashDot. The benchmark natively supports Read-only and Read-Write workloads, and it enables users to specify the workload in terms of the number of concurrent client requests. For this tutorial, we will use workloads ranging from 1000 to 7000. This example experiment features a system topology composed of:</p>
+<ul>
+<li>1 Apache HTTP server</li>
+<li>1 Tomcat Application server</li>
+<li>1 CJDBC Middleware server</li>
+<li>1 MySQL DB server</li>
+</ul>
+<p>Note: we generally refer to this as a <a href="https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/">1-1-1-1 topology</a> where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.</p>
+<p>[googleapps domain="drive" dir="file/d/0ByvytIe8I-qpbDhDV1ZPU0RjcVU/preview" query="" width="640" height="480" /]</p>
+<p><em>Note: The video above takes you through executing an experiment. However, the most up to date information is listed below so put precedence on the below instructions and use the video as support.</em></p>
+<p><a href="https://gtelbatutorial.wordpress.com/faqs/">FAQs and Best Practices</a></p>

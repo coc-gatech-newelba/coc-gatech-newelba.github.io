@@ -1,0 +1,156 @@
+---
+layout: post
+title: Methodology and Data Analysis
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: trash
+categories: []
+tags: []
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '16467321123'
+  timeline_notification: '1522875933'
+  _wp_trash_meta_status: publish
+  _wp_trash_meta_time: '1523302996'
+  _wp_desired_post_slug: experiment-analysis
+author:
+  login: gtelbaproject
+  email: gt.elba.project@gmail.com
+  display_name: GT Elba Project
+  first_name: GT Elba
+  last_name: Project
+---
+<h4>Analysis Outline</h4>
+<ol>
+<li>Explain your approach to data transformation, integration, and management.</li>
+<li>Detail how you use the data gathered to isolate millibottlenecks and diagnose their root cause.</li>
+<li>Describe the steps needed to analyze your experiment:
+<ol>
+<li>Copy the tarball archive containing the experiment data to a location proximate to the cloned Elba Github repository.</li>
+<li>Unzip the copied archive.</li>
+<li>Navigate to the parsers directory of the cloned Elba Github repository.</li>
+<li>Execute "runparsers.sh" by providing the following:
+<ol>
+<li>Path to the directory containing the unzipped archive</li>
+<li>Target location to store the processing results</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4>milliScope Data Flow and Architecture</h4>
+<p><img class="alignnone size-full wp-image-103" src="{{ site.baseurl }}/assets/screen-shot-2018-03-28-at-7-05-35-pm.png" alt="Screen Shot 2018-03-28 at 7.05.35 PM" width="868" height="373" /></p>
+<p>The data transformation flow of milliScope. The event mScopeMonitors capture<br />
+timestamps, as shown in Figure 4, in the component logs, while the resource mScopeMonitors record the system resource utilization. mScopeDataTranformer converts these unstructured data to structured tuples and loads them into a dynamic data warehouse, mScopeDB, for advanced analysis.</p>
+<p>mScopeData Transformer Design</p>
+<ul>
+<li>Data pipeline transforms highly variable monitoring data into aggregates that are helpful in millibottleneck isolation and root cause analysis​</li>
+<li>These aggregates are:​
+<ul>
+<li>Point-in-Time Response Time​</li>
+<li>Queue Length​</li>
+<li>Downstream Service Time​</li>
+<li>Resource Consumption Descriptive Statistics​</li>
+</ul>
+</li>
+</ul>
+<p>Other Parsers</p>
+<ul>
+<li>Cparsers – extract request-level data out of component logs. <i>These are pictured in addition to Resource parsers</i>​
+<ul>
+<li>ServiceTime – reads request-level data and calculates dst​</li>
+<li>Pointintime – reads request-level data (Apache) and calculated pit​</li>
+<li>Multifile – basically joins and aggregates data in uniform entities (dst_table, resource_table); pit is independent​</li>
+</ul>
+</li>
+<li>How to reconcile not ingesting XML into mScopeDataTransformer?​
+<ul>
+<li>Component parsers were supposed to output XML​</li>
+<li>Even if they were, we still need to calculate aggregates like queue lengths and dst​
+<ul>
+<li>Prob in database; the issue with this is trying to do the integration and calculation when the schemas change…​</li>
+<li>Or, compute aggregates externally and import​</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>milliAnalyst</h4>
+<ul>
+<li>Uniform data interface consisting of three entities:​
+<ul>
+<li>PointinTime ​</li>
+<li>DownstreamServiceTime (DST)​</li>
+<li>ResourceObservations​</li>
+</ul>
+</li>
+<li>Each of these entities can have a variable number of number of attributes ​</li>
+<li>Experiment specification impacts this, i.e. the number of nodes determines the number of DST attributes​</li>
+<li>Number of attributes can also depend on characteristics that might not be known prior to running an experiment, such as a node’s number of CPUs, cores, NICs or disks​</li>
+<li>Method needs to handle this variable number of attributes, i.e. no fixed schemas​</li>
+<li>Method needs to be able to integrate data across time and space​</li>
+<li>Representation needs to be able to handle data anomalies and support efficient filtering and retrieval of small data subsets across all of the measurements​</li>
+<li>Support graph-based reasoning​</li>
+</ul>
+<p>milliBottlenecks</p>
+<ul>
+<li>Millibottlenecks happen in different system layers​
+<ul>
+<li>System software: Java garbage collection​</li>
+<li>Processor architecture: DVFS​</li>
+<li>Application Virtual Machine consolidation​</li>
+</ul>
+</li>
+<li>Though short-lived, millibottlenecks have big impact<b> </b>on n-tier application performance​
+<ul>
+<li>VLRT requests​</li>
+<li>Queue amplification from n-tier system component dependencies​</li>
+</ul>
+</li>
+</ul>
+<p><img class="alignnone size-full wp-image-104" src="{{ site.baseurl }}/assets/screen-shot-2018-03-28-at-7-07-24-pm.png" alt="Screen Shot 2018-03-28 at 7.07.24 PM" width="818" height="434" /></p>
+<p>Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis.</p>
+<h4>Solutions</h4>
+<ul>
+<li>Three kinds of solutions for Latency Long Tail Problem​
+<ul>
+<li>Bug-fix, specific solutions for each cause (many causes, not all can be fixed)​</li>
+<li>General solutions for transient bottlenecks (primarily improved queue management)​</li>
+<li>Last-resort solution​</li>
+</ul>
+</li>
+<li>Bug-Fix for Specific Solutions
+<ul>
+<li>Some cases can be “fixed”​
+<ul>
+<li>Java GC in JVM 1.5 was “fixed” in JVM 1.6​</li>
+<li>DVFS anti-synchrony can be “fixed” by changing control periods (some complications)​</li>
+</ul>
+</li>
+<li>Other cases are harder to fix​
+<ul>
+<li>VM consolidation case (noisy neighbor) is really non-deterministic​</li>
+</ul>
+</li>
+<li>Kernel daemon processes (many)​</li>
+</ul>
+</li>
+<li>General Solutions
+<ul>
+<li>Approaches that address transient bottlenecks (instead of specific “bugs”)​
+<ul>
+<li>3 stages: (1) transient bottleneck formation, (2) queue amplification, (3) packet retransmission​</li>
+</ul>
+</li>
+<li>(1) Transient bottleneck detection and remedial action (e.g., disruption)​
+<ul>
+<li>Difficult, due to the short lifespan of transient bottlenecks​</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
