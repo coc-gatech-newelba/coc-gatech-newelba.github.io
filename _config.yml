@@ -29,8 +29,8 @@ github_username: --
 # Build settings
 name: coc-gatech-newelba.github.io
 markdown: kramdown
-#theme: minima
-theme: jekyll-theme-slate
+theme: minima
+#theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
