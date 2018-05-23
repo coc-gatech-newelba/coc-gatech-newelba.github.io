@@ -1,0 +1,24 @@
+---
+author: gtelbaproject
+comments: true
+date: 2018-04-09 19:45:03+00:00
+layout: post
+link: https://gtelbatutorial.wordpress.com/2018/04/09/tutorial-2/
+slug: tutorial-2
+title: Tutorial
+wordpress_id: 197
+---
+
+This tutorial is split into three main sections which are set-up, experiment generation, and experiment execution. If doing this tutorial for the first time please start from set-up and follow in chronological order.
+
+[Set-Up](https://gtelbatutorial.wordpress.com/set-up/)
+
+Set-up will take the user through creating an Emulab account, generating a SSH key, and creating the correct directories in which to run the experiment.
+
+[Experiment Generation](https://gtelbatutorial.wordpress.com/experiment-generation/)
+
+The experiment generation section will take the user through creating the experiment, describing the experiment topology in the xml file, assigning parameters, and generating the script and code needed for the experiment.
+
+[Experiment Execution](https://gtelbatutorial.wordpress.com/Experiment-Execution/)
+
+The experiment execution section will take the user through the actual execution of the experiment and the user can then go to our [analysis section](https://gtelbatutorial.wordpress.com/experiment-analysis/) to properly analyze their results.
