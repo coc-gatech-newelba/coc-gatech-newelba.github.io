@@ -31,8 +31,8 @@ name: coc-gatech-newelba.github.io
 markdown: kramdown
 theme: minima
 #theme: jekyll-theme-slate
-plugins:
-  - jekyll-feed
+#plugins:
+#  - jekyll-feed
 
 permalink: /blog/:year/:month/:day/:title
 
