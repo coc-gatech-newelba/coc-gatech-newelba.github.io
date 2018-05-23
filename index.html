@@ -5,9 +5,11 @@ title: NewElba project
 
 <ul>
   {% for page in site.html_pages %}
-    <li>
+    {% if page.title != '' %}
+     <li>
        <a href="{{ page.url }}">{{ page.title }}</a>
     </li>
+    {% endif %}
   {% endfor %}
 </ul>
 
