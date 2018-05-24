@@ -36,7 +36,8 @@ theme: minima
 
 header_pages:
   - about.md
-  - /blog/index.md
+  - blog/index.md
+
 permalink: /blog/:year/:month/:day/:title
 
 # Exclude from processing.
