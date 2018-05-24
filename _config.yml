@@ -36,7 +36,7 @@ theme: minima
 
 header_pages:
   - about.md
-  - blog
+  - blog.md
 
 permalink: /blog/:year/:month/:day/:title
 
