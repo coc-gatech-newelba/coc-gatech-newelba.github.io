@@ -6,7 +6,9 @@ layout: default
 permalink: /blog/
 ---
 
-<ul>
+<h1>{{ page.title }}</h1>
+
+<ul class="posts">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
