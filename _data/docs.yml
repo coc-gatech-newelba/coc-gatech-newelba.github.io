@@ -1,50 +1,19 @@
 - title: Setup
   docs:
-  - title: "Cloud Deployment"
-    url: cloud-deployment/index.markdown
-  
-  - title: "Experiment Analysis"
-    url: experiment-analysis/index.markdown
-                                                                                              
-  - title: "NS Commands"
-    url: experimentation/bootstrap/ns-commands/index.markdown
-  
-  - title: ".NSFile"
-    url: experimentation/bootstrap/nsfile/index.markdown
-  
-  - title: ".NSFile Resources"
-    url: experimentation/bootstrap/nsfile-example/index.markdown
-  
-  - title: "Set-Up"
-    url: experimentation/bootstrap/set-up/index.markdown
-  
-  - title: "SSH"
-    url: experimentation/bootstrap/ssh/index.markdown
-  
-  - title: "XML Configuration Parameters"
-    url: experimentation/bootstrap/xml-configuration-parameters/index.markdown
-  
-  - title: "Emulab Tips"
-    url: experimentation/emulab-tips/index.markdown
-  
-  - title: "Experiment Topologies"
-    url: experimentation/experiment-customization/index.markdown
-  
-  - title: "Experiment Execution"
-    url: experimentation/experiment-execution/index.markdown
-  
-  - title: "Experiment Generation"
-    url: experimentation/experiment-generation/index.markdown
-  
-  - title: "Experiment Topology 1-1-1-1"
-    url: experimentation/experiment-topology-1-1-1-1/index.markdown
-
-   - title: "Latency Long Tail Problem"
-    url: latency-long-tail-problem/index.markdown
-
-- title: Help 
+  - cloud-deployment
+  - experiment-analysis
+  - ns-commands
+  - nsfile
+  - nsfile-example
+  - set-up
+  - ssh
+  - xml-configuration-parameters
+  - emulab-tips
+  - experiment-customization
+  - experiment-execution
+  - experiment-generation
+  - experiment-topology-1-1-1-1
+  - latency-long-tail-problem
+- title: Help
   docs:
-  - title: "FAQs"
-    url: faqs/index.markdown
-
-
+  - faqs
