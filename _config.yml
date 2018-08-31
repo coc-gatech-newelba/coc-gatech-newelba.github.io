@@ -34,11 +34,36 @@ theme: minima
 #plugins:
 #  - jekyll-feed
 
-header_pages:
-  - about.md
-  - blog.md
+#header_pages:
+#  - about.md
+#  - blog.md
 
-permalink: /blog/:year/:month/:day/:title
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
+
+#permalink: /blog/:year/:month/:day/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
