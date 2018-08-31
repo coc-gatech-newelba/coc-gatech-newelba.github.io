@@ -5,6 +5,7 @@ date: 2018-03-26 15:03:47+00:00
 layout: page
 link: https://gtelbatutorial.wordpress.com/cloud-deployment/
 slug: cloud-deployment
+permalink: /docs/cloud-deployment/
 title: Cloud Deployment
 wordpress_id: 87
 ---
