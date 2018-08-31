@@ -26,10 +26,12 @@ GT Elba Research: https://www.cc.gatech.edu/systems/projects/Elba/index.html
 #github_username: --
 #permalink: /:name
 
+bootwatch: paper
+
 # Build settings
 name: coc-gatech-newelba.github.io
 markdown: kramdown
-theme: minima
+#theme: minima
 #theme: jekyll-theme-slate
 #plugins:
 #  - jekyll-feed
