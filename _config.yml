@@ -35,7 +35,10 @@ markdown: kramdown
 #theme: minima
 #theme: jekyll-theme-slate
 #plugins:
-#  - jekyll-feed
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+
 
 # header_pages
 #  - about.md

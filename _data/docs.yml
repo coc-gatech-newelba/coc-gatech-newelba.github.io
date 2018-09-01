@@ -1,5 +1,6 @@
 - title: Setup
   docs:
+  - about
   - cloud-deployment
   - experiment-analysis
   - ns-commands
@@ -14,6 +15,7 @@
   - experiment-generation
   - experiment-topology-1-1-1-1
   - latency-long-tail-problem
+
 - title: Help
   docs:
   - faqs
