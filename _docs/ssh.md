@@ -1,19 +1,9 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-04 17:30:48+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/ssh/
-slug: ssh
+permalink: /docs/ssh/
 title: SSH
-wordpress_id: 116
 ---
 
 #### Instructions:
-
-
-
-
 
 	
   1. Create a public RSA (SSH) key on your local ‘nix machine under a **bash** shell
@@ -28,22 +18,13 @@ wordpress_id: 116
         1. The Terminal window opens with the commandline prompt displaying the name of your machine and your username
 
 
-
-
 	
       2. Enter the following command in the Terminal window
 
 
-
-
-    
     <code>cd ~/.ssh
       ssh-keygen -t rsa
     </code>
-
-
-
-
 
 	
       3. This starts the key generation process.  When you execute this command, the ssh-keygen utility prompt you to indicate where to store the key
@@ -71,17 +52,6 @@ wordpress_id: 116
     
     <code>pbcopy < ~/.ssh/id_rsa.pub
     </code>
-
-
-
-
-
-
-
-
-
-
-
 
 
 4. Add the SSH key to your account by selecting “My Account” and then “Edit SSH keys” on the left hand side of the page.  This is where you would paste your SSH key from the prior step.

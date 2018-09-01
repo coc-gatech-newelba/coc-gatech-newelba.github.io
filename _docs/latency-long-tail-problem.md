@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-10 16:32:01+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/latency-long-tail-problem/
-slug: latency-long-tail-problem
+permalink: /docs/latency-long-tail-problem/
 title: Latency Long Tail Problem
-wordpress_id: 210
 ---
 
 ### Latency Long Tail Problem

@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-11 15:12:27+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/experiment-generation/
-slug: experiment-generation
+permalink: /docs/experiment-generation/
 title: Experiment Generation
-wordpress_id: 259
 ---
 
 #### Create experiment on Emulab cluster

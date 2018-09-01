@@ -1,13 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-23 16:46:40+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/xml-configuration-parameters/
-slug: xml-configuration-parameters
-title: XML Configuration Parameters
 permalink: /docs/xml-configuration-parameters/
-wordpress_id: 30
+title: XML Configuration Parameters
 ---
 
 #### Experiment XML Configuration Parameters

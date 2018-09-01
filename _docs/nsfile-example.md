@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-23 16:56:04+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/nsfile-example/
-slug: nsfile-example
+permalink: /docs/nsfile-example/
 title: .NSFile Resources
-wordpress_id: 34
 ---
 
 #### NSFile Example

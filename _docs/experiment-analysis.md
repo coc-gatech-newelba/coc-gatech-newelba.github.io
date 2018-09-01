@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-28 23:18:57+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/experiment-analysis/
-slug: experiment-analysis
+permalink: /docs/experiment-analysis/
 title: Experiment Analysis
-wordpress_id: 102
 ---
 
 #### Analysis Outline

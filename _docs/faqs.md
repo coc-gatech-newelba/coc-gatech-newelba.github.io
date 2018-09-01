@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-25 23:56:54+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/faqs/
-slug: faqs
+permalink: /docs/faqs/
 title: FAQs
-wordpress_id: 56
 ---
 
 

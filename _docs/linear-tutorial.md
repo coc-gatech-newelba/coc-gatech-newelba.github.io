@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-23 16:35:23+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/linear-tutorial/
-slug: linear-tutorial
+permalink: /docs/linear-tutorial/
 title: Linear Tutorial
-wordpress_id: 19
 ---
 
 **Experiment Step-by-Step Set-up**

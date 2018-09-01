@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-26 14:35:33+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/ns-commands/
-slug: ns-commands
+permalink: /docs/ns-commands/
 title: NS Commands
-wordpress_id: 67
 ---
 
 Testbed NS Command Extensions

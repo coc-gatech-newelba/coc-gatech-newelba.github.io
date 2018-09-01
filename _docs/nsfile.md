@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-23 16:44:11+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/nsfile/
-slug: nsfile
+permalink: /docs/nsfile/
 title: .NSFile
-wordpress_id: 27
 ---
 
 ### Designing a Network Topology

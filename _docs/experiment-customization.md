@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-03-23 16:35:58+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/experiment-customization/
-slug: experiment-customization
+permalink: /docs/experiment-customization/
 title: Experiment Topologies
-wordpress_id: 21
 ---
 
 One way to customize the execution of an experiment is to run a different topology. Below are several different topologies one can select to execute.

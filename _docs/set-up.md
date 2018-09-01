@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-11 15:12:02+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/set-up/
-slug: set-up
+permalink: /docs/set-up/
 title: Set-Up
-wordpress_id: 257
 ---
 
 Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval

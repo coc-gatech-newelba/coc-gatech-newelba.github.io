@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-11 15:12:40+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/experiment-execution/
-slug: experiment-execution
+permalink: /docs/experiment-execution/
 title: Experiment Execution
-wordpress_id: 261
 ---
 
 #### Executing the Experiment on Emulab cluster
