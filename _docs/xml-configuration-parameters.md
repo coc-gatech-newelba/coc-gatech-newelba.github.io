@@ -6,6 +6,7 @@ layout: page
 link: https://gtelbatutorial.wordpress.com/xml-configuration-parameters/
 slug: xml-configuration-parameters
 title: XML Configuration Parameters
+permalink: /docs/xml-configuration-parameters/
 wordpress_id: 30
 ---
 

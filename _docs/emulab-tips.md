@@ -1,12 +1,6 @@
 ---
-author: gtelbaproject
-comments: false
-date: 2018-04-11 12:44:24+00:00
-layout: page
-link: https://gtelbatutorial.wordpress.com/emulab-tips/
-slug: emulab-tips
+permalink: /docs/emulab-tips/
 title: Emulab Tips
-wordpress_id: 245
 ---
 
 General Tips
