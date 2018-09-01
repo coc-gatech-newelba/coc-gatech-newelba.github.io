@@ -1,6 +1,6 @@
 ---
 title: Start
-permalink: /docs/about/
+permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 

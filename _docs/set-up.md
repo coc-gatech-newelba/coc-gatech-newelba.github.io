@@ -28,7 +28,7 @@ Once approved for an account fill out your information- make note of the followi
 
 
 
-[SSH Generation](https://gtelbatutorial.wordpress.com/2018/02/22/ssh)
+[SSH Generation](/docs/ssh/)
 
 Create a public RSA (SSH) key on your local ‘nix machine under a **bash** shell.
 
@@ -45,24 +45,12 @@ Email Josh Kimball with your GitHub username to gain access into the GitHub repo
   * If you are unfamiliar with GitHub, please create an account at GitHub.com
 
 
-Using your computer terminal, create a directory on Emulab’s file share, users.emulab.net, by executing the following commands:
+Using your computer terminal, create a directory on Emulab’s file share, users.emulab.net, by executing the following commands:  
+	
+* Please note: substitute for your Emulab account username  
 
 	
-  * 
-
-	
-    * Please note: substitute for your Emulab account username
-
-	
-      * Example: JaneDoe@users.emulab.net
-
-
-
-
-
-
-
-
+* Example: JaneDoe@users.emulab.net  
 
     
     <code>ssh @users.emulab.net  
@@ -114,15 +102,17 @@ Next, execute the following commands:
 
 This will result in the following activity in terminal:
 
-![ZXVF 1](https://gtelbatutorial.files.wordpress.com/2018/04/zxvf-1.png)
+[Screen Shot 1](../img/screenshot3lineartutorial.png)
 
-![ZXVF 2](https://gtelbatutorial.files.wordpress.com/2018/04/zxvf-2.png)![zxvf-3-e1523830011878.png](https://gtelbatutorial.files.wordpress.com/2018/04/zxvf-3-e1523830023684.png)
+[Screen Shot 2](../img/screenshot4lineartutorial.png)
+
+[Screen Shot 3](../img/screenshot5lineartutorial.png)
 
 
 #### [Experiment Description](https://gtelbatutorial.wordpress.com/experiment-customization/)
 
 
-Follow this [link](https://gtelbatutorial.wordpress.com/experiment-customization/) if you want to execute an experiment other than the topology 1-1-1-1.
+Follow this [link](/docs/experiment-customization/) if you want to execute an experiment other than the topology 1-1-1-1.
 
 The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is modeled after a commercial web-based bulletin board system, SlashDot. The benchmark natively supports Read-only and Read-Write workloads, and it enables users to specify the workload in terms of the number of concurrent client requests. For this tutorial, we will use workloads ranging from 1000 to 7000. This example experiment features a system topology composed of:
 
@@ -141,10 +131,10 @@ The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is m
   * 1 MySQL DB server
 
 
-Note: we generally refer to this as a [1-1-1-1 topology](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/) where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.
+Note: we generally refer to this as a [1-1-1-1 topology](/docs/experiment-topology-1-1-1-1/) where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.
 
 [googleapps domain="drive" dir="file/d/0ByvytIe8I-qpbDhDV1ZPU0RjcVU/preview" query="" width="640" height="480" /]
 
 _Note: The video above takes you through executing an experiment. However, the most up to date information is listed below so put precedence on the below instructions and use the video as support._
 
-[FAQs and Best Practices](https://gtelbatutorial.wordpress.com/faqs/)
+[FAQs and Best Practices](/docs/faqs/)
