@@ -103,11 +103,11 @@ Next, execute the following commands:
 This will result in the following activity in terminal:
 
 
-![screenshot 1](img/screenshot3lineartutorial.png)
-![screenshot 2](img/screenshot4lineartutorial.png)
-![screenshot 3](img/screenshot5lineartutorial.png)
+![screenshot 1](/img/screenshot3lineartutorial.png)
+![screenshot 2](/img/screenshot4tutorial.png)
+![screenshot 3](/img/screenshot5tutorial.png)
 
-#### [Experiment Description](https://gtelbatutorial.wordpress.com/experiment-customization/)
+#### [Experiment Description](/docs/experiment-customization/)
 
 
 Follow this [link](/docs/experiment-customization/) if you want to execute an experiment other than the topology 1-1-1-1.
