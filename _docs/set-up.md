@@ -102,11 +102,11 @@ Next, execute the following commands:
 
 This will result in the following activity in terminal:
 
-[Screen Shot 1](../img/screenshot3lineartutorial.png)
-
-[Screen Shot 2](../img/screenshot4lineartutorial.png)
-
-[Screen Shot 3](../img/screenshot5lineartutorial.png)
+<div class="col-md-6 text-center">
+    <img src="img/screenshot3lineartutorial.png" alt="" class="img-responsive">
+    <img src="img/screenshot4lineartutorial.png" alt="" class="img-responsive">
+    <img src="img/screenshot5lineartutorial.png" alt="" class="img-responsive">
+</div>
 
 
 #### [Experiment Description](https://gtelbatutorial.wordpress.com/experiment-customization/)
