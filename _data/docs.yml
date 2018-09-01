@@ -1,21 +1,24 @@
-- title: Setup
+- title: Bootstrap
   docs:
-  - about
-  - cloud-deployment
-  - experiment-analysis
+  - set-up
+  - ssh
   - ns-commands
   - nsfile
   - nsfile-example
-  - set-up
-  - ssh
-  - xml-configuration-parameters
-  - emulab-tips
-  - experiment-customization
-  - experiment-execution
-  - experiment-generation
-  - experiment-topology-1-1-1-1
+
+- title: Experimentation
+  docs:
   - latency-long-tail-problem
+  - experiment-topology-1-1-1-1
+  - experiment-generation
+  - cloud-deployment
+  - experiment-execution
+  - experiment-analysis
+  - experiment-customization
+  - xml-configuration-parameters
 
 - title: Help
   docs:
+  - about
+  - emulab-tips
   - faqs
