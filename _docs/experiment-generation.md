@@ -24,7 +24,7 @@ Fill out the the form accordingly.
 
 
 
-[.NSFile Generation](https://gtelbatutorial.wordpress.com/nsfile)
+[.NSFile Generation](/docs/nsfile)
 
 
 
@@ -35,10 +35,10 @@ Fill out the the form accordingly.
   * This input file specifies the network topology, machine types and OS images for the experiment
 
 	
-  * Note: a sample .NSfile can be found [here](https://gtelbatutorial.wordpress.com/nsfile/).
+  * Note: a sample .NSfile can be found [here](/docs/nsfile/).
 
 	
-    * To execute the 1-1-1-1 topology you can copy and paste the code given [here](https://gtelbatutorial.wordpress.com/nsfile/) into a text editor. _Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. _
+    * To execute the 1-1-1-1 topology you can copy and paste the code given [here](/docs/nsfile/) into a text editor. _Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. _
 
 
 
@@ -55,7 +55,7 @@ _Note: Node locations may be changed in the event that nodes of one group area a
 #### [](https://github.com/coc-gatech-newelba/coc-gatech-newelba.github.io/wiki/Tutorial:-Bootstrap-&-Experiment-Execution-(alpha)#step-2-describing-the-experiment-by-editingcompleting-experiment-xml)Describing the Experiment by editing/completing Experiment XML
 
 
-[XML Parameters](https://gtelbatutorial.wordpress.com/xml-configuration-parameters/)
+[XML Parameters](/docs/xml-configuration-parameters/)
 
 We use an XML file as a basis for generating all experiment artifacts. This XML file contains various environmental and experimental parameters, for example:
 
@@ -102,7 +102,7 @@ Complete this value using the **_Experiment Name_** value from above (step 1) 
 
 
     
-    <img src="https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-2-32-55-pm.png" alt="Screen Shot 2018-04-10 at 2.32.55 PM" height="24" class="alignnone  wp-image-228" width="545"></img>
+    <img src="/img/screen-shot-2018-04-10-at-2-32-55-pm.png" alt="Screen Shot 2018-04-10 at 2.32.55 PM" height="24" class="alignnone  wp-image-228" width="545"></img>
 
 
 
@@ -121,7 +121,7 @@ Complete this value using the **_Experiment Name_** value from above (step 1) 
 
 
 
-![Screen Shot 2018-04-15 at 5.43.48 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-15-at-5-43-48-pm.png)
+![Screen Shot 2018-04-15 at 5.43.48 PM](/img/screen-shot-2018-04-15-at-5-43-48-pm.png)
 
 
 
@@ -129,7 +129,7 @@ Complete this value using the **_Experiment Name_** value from above (step 1) 
   * _Username: _Complete using your Emulab account username
 
 
-![Screen Shot 2018-04-10 at 2.37.35 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-2-37-35-pm.png)
+![Screen Shot 2018-04-10 at 2.37.35 PM](/img/screen-shot-2018-04-10-at-2-37-35-pm.png)
 
 
 
@@ -137,7 +137,7 @@ Complete this value using the **_Experiment Name_** value from above (step 1) 
   * Monitors: Set the following monitor parameters to _false_
 
 
-![Screen Shot 2018-04-10 at 2.38.20 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-2-38-20-pm.png)
+![Screen Shot 2018-04-10 at 2.38.20 PM](/img/screen-shot-2018-04-10-at-2-38-20-pm.png)
 
 
 
@@ -154,7 +154,7 @@ Complete this value using the **_Experiment Name_** value from above (step 1) 
 
 
 
-![Screen Shot 2018-04-10 at 2.38.46 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-2-38-46-pm.png)
+![Screen Shot 2018-04-10 at 2.38.46 PM](/img/screen-shot-2018-04-10-at-2-38-46-pm.png)
 
 _Important Notes_
 
@@ -164,7 +164,7 @@ _Important Notes_
   * mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.
 
 	
-  * This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the [XML Configuration Parameters](https://gtelbatutorial.wordpress.com/xml-configuration-parameters/).
+  * This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the [XML Configuration Parameters](/docs/xml-configuration-parameters/).
 
 	
   * In the case of errors using the "open" command, refer to the following webpage on how to use vim: click [here](https://cs88-website.github.io/articles/vim.html#opening-files).
@@ -213,9 +213,9 @@ In the case of our running example, this should be:
 
 When running the code, your terminal may look like the following:
 
-![RUBBOS RUN](https://gtelbatutorial.files.wordpress.com/2018/04/rubbos-run.png)
+![RUBBOS RUN](/img/rubbos-run.png)
 
-![RUBBOS RUN 2](https://gtelbatutorial.files.wordpress.com/2018/04/rubbos-run-21.png)
+![RUBBOS RUN 2](/img/rubbos-run-21.png)
 
 
 
@@ -294,4 +294,4 @@ In general, our code generator is orchestrated by way of the `runRubbosExperime
 
 
 
-[FAQ and Best Practices](https://gtelbatutorial.wordpress.com/faqs/)
+[FAQ and Best Practices](/docs/faqs/)

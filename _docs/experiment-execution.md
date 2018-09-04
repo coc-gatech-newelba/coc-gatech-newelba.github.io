@@ -23,9 +23,9 @@ Finally, the experiment can be run one of two ways (please read before choosing 
 
 Running the command may result in the following activity in terminal:
 
-![RUN SH](https://gtelbatutorial.files.wordpress.com/2018/04/run-sh.png)
+![RUN SH](/img/run-sh.png)
 
-![RUN SH 2.png](https://gtelbatutorial.files.wordpress.com/2018/04/run-sh-2.png)
+![RUN SH 2.png](/img/run-sh-2.png)
 
 While executing an experiment in this manner works, there a few downsides to executing an experiment this way. These limitations are:
 
@@ -106,4 +106,4 @@ In general, every generated experiment adheres to a canonical structure.
 
 
 
-[FAQ and Best Practices](https://gtelbatutorial.wordpress.com/faqs/)
+[FAQ and Best Practices](/docs/faqs/)

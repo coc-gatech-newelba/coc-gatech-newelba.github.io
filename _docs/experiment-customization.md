@@ -5,13 +5,13 @@ title: Experiment Topologies
 
 One way to customize the execution of an experiment is to run a different topology. Below are several different topologies one can select to execute.
 
-![Screen Shot 2018-03-28 at 6.53.26 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-28-at-6-53-26-pm.png)
+![Screen Shot 2018-03-28 at 6.53.26 PM](/img/screen-shot-2018-03-28-at-6-53-26-pm.png)
 
 The above image details the experiment set up on the Emulab Cluster.
 
-[1-1-1-1](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)   [1-1-1-2](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)   [1-1-1-3](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)
+[1-1-1-1](/docs/experiment-topology-1-1-1-1/)   [1-1-1-2](/docs/experiment-topology-1-1-1-1/)   [1-1-1-3](/docs/experiment-topology-1-1-1-1/)
 
-[1-1-1-4](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)   [1-1-1-5](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)   [1-1-1-6](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/)
+[1-1-1-4](/docs/experiment-topology-1-1-1-1/)   [1-1-1-5](/docs/experiment-topology-1-1-1-1/)   [1-1-1-6](/docs/experiment-topology-1-1-1-1/)
 
 
 #### Creating New Topologies

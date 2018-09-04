@@ -9,7 +9,7 @@ title: XML Configuration Parameters
 
 
 
-[Home](https://gtelbatutorial.wordpress.com/2018/02/22/introduction-to-elba)
+[Home](/docs/introduction-to-elba)
 	
   * Experiment Configuration Parameters:
 

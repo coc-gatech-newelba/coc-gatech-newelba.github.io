@@ -5,12 +5,12 @@ title: Linear Tutorial
 
 **Experiment Step-by-Step Set-up**
 
-[Home](https://gtelbatutorial.wordpress.com/2018/02/22/introduction-to-elba)
+[Home](/docs/introduction-to-elba)
 
 
 
 	
-  1.  Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval![EmulabElba](https://gtelbatutorial.files.wordpress.com/2018/03/emulabelba.png)
+  1.  Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval![EmulabElba](/img/emulabelba.png)
 
 	
   2. Once approved for an account fill out your information- make note of the following two points:
@@ -34,7 +34,7 @@ title: Linear Tutorial
   3. Create a public RSA (SSH) key on your local ‘nix machine under a **bash** shell. 
 
 
-[SSH Generation](https://gtelbatutorial.wordpress.com/2018/02/22/ssh)
+[SSH Generation](/docs/ssh)
 
 4. Add the SSH key to your account by selecting “My Account” and then “Edit SSH keys” on the left hand side of the page.  This is where you would paste your SSH key from the prior step.
 
@@ -69,7 +69,7 @@ title: Linear Tutorial
 	
     2. ssh JaneDoe@users.emulab.net  
  cd /proj/Infosphere  
- mkdir JaneDoe![Screenshot2LinearTutorial](https://gtelbatutorial.files.wordpress.com/2018/03/screenshot2lineartutorial.png)
+ mkdir JaneDoe![Screenshot2LinearTutorial](/img/screenshot2lineartutorial.png)
 
 
 
@@ -124,7 +124,7 @@ _NOTE: if you do not gain permission from Josh Kimball, you will not be able to 
     1. git status
 
 	
-    2. You should see this:![Screenshot3LinearTutorial](https://gtelbatutorial.files.wordpress.com/2018/03/screenshot3lineartutorial.png)
+    2. You should see this:![Screenshot3LinearTutorial](/img/screenshot3lineartutorial.png)
 
 
 
@@ -165,18 +165,18 @@ _NOTE: if you do not gain permission from Josh Kimball, you will not be able to 
 
 
 
-![Screenshot4Tutorial](https://gtelbatutorial.files.wordpress.com/2018/03/screenshot4tutorial.png)
+![Screenshot4Tutorial](/img/screenshot4tutorial.png)
 
 
-#### ![Screenshot5Tutorial](https://gtelbatutorial.files.wordpress.com/2018/03/screenshot5tutorial.png)
+#### ![Screenshot5Tutorial](/img/screenshot5tutorial.png)
 
 
 
 
-#### [Experiment Description](https://gtelbatutorial.wordpress.com/experiment-customization/)
+#### [Experiment Description](/docs/experiment-customization/)
 
 
-Follow this [link](https://gtelbatutorial.wordpress.com/experiment-customization/) if you want to execute an experiment other than the topology 1-1-1-1.
+Follow this [link](/docs/experiment-customization/) if you want to execute an experiment other than the topology 1-1-1-1.
 
 The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is modeled after a commercial web-based bulletin board system, SlashDot. The benchmark natively supports Read-only and Read-Write workloads, and it enables users to specify the workload in terms of the number of concurrent client requests. For this tutorial, we will use workloads ranging from 1000 to 7000. This example experiment features a system topology composed of:
 
@@ -195,7 +195,7 @@ The example experiment uses an n-tier application benchmark, RUBBoS. RUBBoS is m
   * 1 MySQL DB server
 
 
-Note: we generally refer to this as a [1-1-1-1 topology](https://gtelbatutorial.wordpress.com/experiment-topology-1-1-1-1/) where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.
+Note: we generally refer to this as a [1-1-1-1 topology](/docs/experiment-topology-1-1-1-1/) where each number corresponds to the number of deployed Web, Application, Middleware and Database servers in that order.
 
 [googleapps domain="drive" dir="file/d/0ByvytIe8I-qpbDhDV1ZPU0RjcVU/preview" query="" width="640" height="480" /]
 
@@ -230,16 +230,16 @@ To increase the efficiency and speed of cloud-based systems research, we rely on
 
 
 	
-  3. This form also asks you to provide an _.NSFile_[.NSFile Generation](https://gtelbatutorial.wordpress.com/nsfile)
+  3. This form also asks you to provide an _.NSFile_[.NSFile Generation](/docs/nsfile)
 
 	
     * This input file specifies the network topology, machine types and OS images for the experiment
 
 	
-    * Note: a sample .NSfile can be found [here](https://gtelbatutorial.wordpress.com/nsfile/).
+    * Note: a sample .NSfile can be found [here](/docs/nsfile/).
 
 	
-      * To execute the 1-1-1-1 topology you can copy and paste the code given [here](https://gtelbatutorial.wordpress.com/nsfile/) into a text editor. _Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. _
+      * To execute the 1-1-1-1 topology you can copy and paste the code given [here](/docs/nsfile/) into a text editor. _Note: if you are using a Mac then use Sublime, Vim, or TextWrangler- do NOT use TextEditor. _
 
 
 
@@ -355,7 +355,7 @@ _Important Notes_
   * mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.
 
 	
-  * This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the [XML Configuration Parameters](https://gtelbatutorial.wordpress.com/xml-configuration-parameters/).
+  * This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial in the [XML Configuration Parameters](/docs/xml-configuration-parameters/).
 
 
 
@@ -575,7 +575,7 @@ In general, every generated experiment adheres to a canonical structure.
 
 
 
-#### [FAQ and Best Practices](https://gtelbatutorial.wordpress.com/faqs/)
+#### [FAQ and Best Practices](/docs/faqs/)
 
 
 

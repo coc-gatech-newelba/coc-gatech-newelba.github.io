@@ -39,7 +39,7 @@ title: SSH
       6. You will need to enter the passphrase a second time to continue.
 
 	
-      7. After you confirm the passphrase, the system generates the pair.![Screen Shot 2018-03-25 at 6.54.48 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-25-at-6-54-48-pm.png)
+      7. After you confirm the passphrase, the system generates the pair.![Screen Shot 2018-03-25 at 6.54.48 PM](/img/screen-shot-2018-03-25-at-6-54-48-pm.png)
 
 	
       8. Your private key is saved to the id_rsa file in the .ssh directory.

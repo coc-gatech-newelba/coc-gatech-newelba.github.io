@@ -13,7 +13,7 @@ title: Latency Long Tail Problem
   * At moderate CPU utilization levels (about 60% at 9000 users), 4% of requests take several seconds, instead of milliseconds
 
 
-![Screen Shot 2018-04-10 at 12.29.02 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-12-29-02-pm.png)
+![Screen Shot 2018-04-10 at 12.29.02 PM](/img/screen-shot-2018-04-10-at-12-29-02-pm.png)
 
 
 

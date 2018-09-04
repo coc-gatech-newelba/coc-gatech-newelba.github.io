@@ -41,7 +41,7 @@ Describe the steps needed to analyze your experiment:
 #### milliScope Data Flow and Architecture
 
 
-![Screen Shot 2018-03-28 at 7.05.35 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-28-at-7-05-35-pm.png)
+![Screen Shot 2018-03-28 at 7.05.35 PM](/img/screen-shot-2018-03-28-at-7-05-35-pm.png)
 
 The data transformation flow of milliScope. The event mScopeMonitors capture
 timestamps, as shown in Figure 4, in the component logs, while the resource mScopeMonitors record the system resource utilization. mScopeDataTranformer converts these unstructured data to structured tuples and loads them into a dynamic data warehouse, mScopeDB, for advanced analysis.
@@ -97,7 +97,7 @@ Though short-lived, millibottlenecks have big impact** **on n-tier applicat
   * Queue amplification from n-tier system component dependencies​
 
 
-![Screen Shot 2018-03-28 at 7.07.24 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-28-at-7-07-24-pm.png)
+![Screen Shot 2018-03-28 at 7.07.24 PM](/img/screen-shot-2018-03-28-at-7-07-24-pm.png)
 
 Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis.
 

@@ -6,7 +6,7 @@ title: .NSFile
 ### Designing a Network Topology
 
 
-[.NSFile Example](https://gtelbatutorial.wordpress.com/nsfile-example/) [NS Commands](https://gtelbatutorial.wordpress.com/ns-commands/)
+[.NSFile Example](/docs/nsfile-example/) [NS Commands](/docs/ns-commands/)
 
 Part of Emulab's power lies in its ability to assume many different topologies; the description of a such a topology is a necessary part of an experiment. (Note: You may want to take a look at our [Java GUI](https://www.emulab.net/clientui.php3) to build experiments without directly editing NS files.) Emulab uses the "NS" ("Network Simulator") format to describe network topologies. This is substantially the same [Tcl](http://www.scriptics.com/software/tcltk/)-based format used by [ns-2](http://www.isi.edu/nsnam/ns/). Since Emulab offers emulation, rather than simulation, these files are interpreted in a somewhat different manner than ns-2. Therefore, some ns-2 functionality may work differently than you expect, or may not be implemented at all. Please look for warnings of the form:
 
@@ -14,7 +14,7 @@ If you feel there is useful functionality missing, please let us know. Also, som
 
 For those unfamiliar with the NS format, here is a small example (_We urge all new Emulab users to begin with a small 3-5 node experiment such as this, so that you will become familiar with NS syntax and the practical aspects of Emulab operation_). Let's say we are trying to create a test network which looks like the following:
 
-![Abcd.Png](https://wiki.emulab.net/wiki/attachment/Tutorial/abcd.png?format=raw)
+![Abcd.Png](/img/abcd.png)
 
 (A is connected to B, and B to C and D with a LAN.)
 An NS file which would describe such a topology is as follows. First off, all NS files start with a simple prologue, declaring a simulator and including a file that allow you to use the special tb-commands:
