@@ -13,9 +13,6 @@ Once approved for an account fill out your information- make note of the followi
   * When filling out information for your account ensure that you put “Infosphere” for both the group AND the project
 
 	
-    * 
-
-	
       * Please note: if you forget, this can be set after logging into Emulab and clicking the “Edit Profile” link
 
 	

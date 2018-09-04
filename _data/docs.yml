@@ -1,6 +1,8 @@
 - title: Bootstrap
   docs:
+  - home
   - set-up
+  - linear-tutorial
   - ssh
   - ns-commands
   - nsfile
@@ -16,9 +18,9 @@
   - experiment-analysis
   - experiment-customization
   - xml-configuration-parameters
+  - resource-monitors
 
 - title: Help
   docs:
-  - home
   - emulab-tips
   - faqs
