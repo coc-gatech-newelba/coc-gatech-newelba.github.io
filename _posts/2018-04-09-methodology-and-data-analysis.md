@@ -127,11 +127,11 @@ title: "Methodology and Data Analysis"
 
 
 
-![Screen Shot 2018-03-28 at 7.07.24 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-28-at-7-07-24-pm.png)
+![Screen Shot 2018-03-28 at 7.07.24 PM](/img/screen-shot-2018-03-28-at-7-07-24-pm.png)
 
 Above is the work flow of milliBottleneck discovery. Users define the configuration file at first, and the script generator generates scripts which set up the experiment environment and deploy milliScope as well as other softwares. mScopeDataTransformer converts these unstructured data to structured tuples in mScopeDB as described in Figure 3 for advanced analysis.
 
-![Screen Shot 2018-04-10 at 12.39.26 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-12-39-26-pm.png)
+![Screen Shot 2018-04-10 at 12.39.26 PM](/img/screen-shot-2018-04-10-at-12-39-26-pm.png)
 
 
 
@@ -139,7 +139,7 @@ Above is the work flow of milliBottleneck discovery. Users define the configura
   * VLRT requests (see (a)) caused by queue peaks in Apache (see (b)) when the system is at workload 9000 clients.
 
 
-![Screen Shot 2018-04-10 at 12.39.49 PM](https://gtelbatutorial.files.wordpress.com/2018/04/screen-shot-2018-04-10-at-12-39-49-pm.png)
+![Screen Shot 2018-04-10 at 12.39.49 PM](/img/screen-shot-2018-04-10-at-12-39-49-pm.png)
 
 
 

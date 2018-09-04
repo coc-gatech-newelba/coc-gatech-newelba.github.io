@@ -8,7 +8,7 @@ title: "Data Processing and Management"
 #### milliScope Data Flow and Architecture
 
 
-![Screen Shot 2018-03-28 at 7.05.35 PM](https://gtelbatutorial.files.wordpress.com/2018/03/screen-shot-2018-03-28-at-7-05-35-pm.png)
+![Screen Shot 2018-03-28 at 7.05.35 PM](/img/screen-shot-2018-03-28-at-7-05-35-pm.png)
 
 The data transformation flow of milliScope. The event mScopeMonitors capture
 timestamps, as shown in Figure 4, in the component logs, while the resource mScopeMonitors record the system resource utilization. mScopeDataTranformer converts these unstructured data to structured tuples and loads them into a dynamic data warehouse, mScopeDB, for advanced analysis.
