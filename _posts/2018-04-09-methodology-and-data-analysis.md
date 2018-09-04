@@ -3,10 +3,7 @@ author: gtelbaproject
 comments: true
 date: 2018-04-09 19:43:05+00:00
 layout: post
-link: https://gtelbatutorial.wordpress.com/2018/04/09/methodology-and-data-analysis/
-slug: methodology-and-data-analysis
-title: Methodology and Data Analysis
-wordpress_id: 190
+title: "Methodology and Data Analysis"
 ---
 
 #### Analysis Outline

@@ -1,12 +1,8 @@
 ---
 author: gtelbaproject
-comments: true
 date: 2018-04-09 19:43:24+00:00
 layout: post
-link: https://gtelbatutorial.wordpress.com/2018/04/09/data-processing-and-management-2/
-slug: data-processing-and-management-2
-title: Data Processing and Management
-wordpress_id: 191
+title: "Data Processing and Management"
 ---
 
 #### milliScope Data Flow and Architecture

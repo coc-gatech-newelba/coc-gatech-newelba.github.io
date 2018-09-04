@@ -1,12 +1,8 @@
 ---
 author: gtelbaproject
-comments: true
 date: 2018-04-09 19:42:03+00:00
 layout: post
-link: https://gtelbatutorial.wordpress.com/2018/04/09/publications/
-slug: publications
-title: Publications
-wordpress_id: 186
+title: "Publications"
 ---
 
 ## 2017

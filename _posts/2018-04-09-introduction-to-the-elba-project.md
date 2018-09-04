@@ -1,12 +1,8 @@
 ---
 author: gtelbaproject
-comments: true
 date: 2018-04-09 19:45:23+00:00
 layout: post
-link: https://gtelbatutorial.wordpress.com/2018/04/09/introduction-to-the-elba-project/
-slug: introduction-to-the-elba-project
-title: Introduction to the Elba Project
-wordpress_id: 198
+title: "Introduction to the Elba Project"
 ---
 
 [Tutorial](https://gtelbatutorial.wordpress.com/linear-tutorial/)   [FAQs](https://gtelbatutorial.wordpress.com/faqs/)
