@@ -17,12 +17,10 @@
 title: Georgia Tech Project Tawny
 email: elba@cc.gatech.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Georgia Tech's Project Elba has evolved into Project Tawny. This page
-contains a tutorial for how to install and deploy our newest tools for
-supporting large scale systems research. 
+  Project Elba has evolved into Project Tawny. 
+  This page contains a tutorial for how to install and deploy our newest tools for supporting large scale systems research. 
   Our tooling currently supports public cloud infastructures like PRObe and Emulab.
-  We plan to support other infastructures like NSF Cloud and Chameleon in the
-coming months. 
+  We plan to support other infastructures like NSF Cloud and Chameleon in the coming months. 
 #baseurl: https://coc-gatech-newelba.github.io # the subpath of your site, e.g. /blog baseurl: "/"
 
 url: https://coc-gatech-newelba.github.io # the base hostname & protocol for your site, e.g. http://example.com
