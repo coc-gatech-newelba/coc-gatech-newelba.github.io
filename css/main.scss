@@ -40,26 +40,25 @@ body {
 }
 
 
-.header-container {
+//.header-container {
   // background-color: black;
   //background-color: rgba(0, 0, 0, 0.5);
-  background: url('../img/ga-tech-klaus.png') no-repeat 50% 0;
+//  background: url('../img/ga-tech-klaus.png') no-repeat 50% 0;
   //font-weight: 500;
   //color: #fff;
-  opacity: 0.3;
+//  opacity: 0.3;
 
   // background-attachment: fixed;
   // background-size: cover;
   // background-position: center 36%;
-  height: 800px;
-  width: 100%;
-  float: left;
-  margin-top: -30px;
+//  height: 800px;
+//  width: 100%;
+//  float: left;
+//  margin-top: -30px;
   // margin-top: -37px;
   // padding-top: 112px;
   // padding-bottom: 112px;
-}
-
+//}
 
 .jumbotron .header-img {
     margin-bottom: 0px;
@@ -76,35 +75,24 @@ body {
     z-index:1;
 }
 
-.jumbotron .container {
-  position:relative;
-  z-index:2;
-}
 
 .jumbotron {
   position:relative;
   padding-top:50px;
   padding-bottom:50px;
+  height: 550px
   margin-top: -30px;
 }
 
-.jumbotron h1 {margin-top:0;}
+.jumbotron .container {
+  position:relative;
+  z-index:2;
+}
 
-.header-text {
-
-  font-weight: 500;
-  height: 800px;
-  width: 100%;
-  float: left;
-  margin-top: -30px;
-  h1 {
+.jumbotron h1 {
+    margin-top:0;
     color: #fff;
-  }
-
 }
-
-
-
 
 .navbar-container {
   font-size: 16px;
