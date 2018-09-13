@@ -54,23 +54,24 @@ body {
   // background-size: cover;
   background-position: center 36%;
   margin-top: -37px;
-  padding-top:120px;
-  padding-bottom:110px;
+  padding-top: 120px;
+  padding-bottom: 110px;
 }
 
 .header-container:after {
   // background-color: black;
   // background-color: rgba(0, 0, 0, 0.5);
-  background: url('../img/ga-tech-klaus.png') no-repeat 50% 0;
+  //background: url('../img/ga-tech-klaus.png') no-repeat 50% 0;
+  background: url('../img/ga-tech-klaus.png') no-repeat;
+  background-size: contain;
   opacity: 0.5;
   z-index: -1;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute;
   content: "";
-  background-size: contain;
   //font-weight: 500;
   // color: #fff;
 
