@@ -10,7 +10,7 @@ title: Linear Tutorial
 
 1. Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval![EmulabElba](/img/emulabelba.png)  
 
-2. Once approved for an account fill out your information- make note of the following two points:  
+2. Once approved for an account, fill out your information making note of the following points:  
 
     1. When filling out information for your account ensure that you put “Infosphere” for both the group AND the project  
 
@@ -141,24 +141,24 @@ The following _Steps_ walk through creating a "reservation" on one of the suppor
 #### Step 1: Create "reservation" on Emulab cluster  
 
 
-  1. Create a new experiment on Emulab by selecting the *Experimentation* drop down at the top of the website.  
-  
-  2. Select *Begin an Experiment*  
-	
-  3. Complete the form as instructed. Please note the following **restrictions** for *Experiment Name*:  
+1. Create a new experiment on Emulab by selecting the *Experimentation* drop down at the top of the website.  
+
+2. Select *Begin an Experiment*  
+
+3. Complete the form as instructed. Please note the following **restrictions** for *Experiment Name*:  
 
 > ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
     
 > Make note of this values as we will use this value later.  
 
-  4. Provide an NSFile topology descriptor  
+4. Provide an NSFile topology descriptor  
 
-* You can use this [NSFile sample](/docs/nsfile/) to execute the Tutorial's 1-1-1-1 topology  
-* Copy and paste this sample's contents using your favorite 'nix editor, i.e. Sublime, Atom, Vim/emacs, or TextWrangler  
-* This input file specifies the network topology, machine types and OS images for the experiment  
-* For our experiment, the NSFile includes 10 nodes which correspond to the following configuration: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.  
+    * You can use this [NSFile sample](/docs/nsfile/) to execute the Tutorial's 1-1-1-1 topology  
+    * Copy and paste this sample's contents using your favorite 'nix editor, i.e. Sublime, Atom, Vim/emacs, or TextWrangler  
+    * This input file specifies the network topology, machine types and OS images for the experiment  
+    * For our experiment, the NSFile includes 10 nodes which correspond to the following configuration: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.  
 
-  5. Submit the form after providing all necessary information, including uploading the *NSFile*  
+5. Submit the form after providing all necessary information, including uploading the *NSFile*  
 
 > **Note:** The sample NSFile places all of the nodes on one local area network (LAN). This can be changed by including more LAN's in the specification and connecting the desired nodes to a particular LAN.  
 
