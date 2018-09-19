@@ -274,11 +274,11 @@ In the case of our running example, this should be:
 	    ./runRubbosExperiment.sh RUBBOS-1111-EMULAB-JaneDoe.xml
 
 
->**Notes:**  
-
-* Activating the experiment (i.e. "swapping it in") on *emulab* and logging into node1 is not a *strict dependency.* However, this path maximizes experiment generation success, since the known dependencies are respected.  
-* The *runRubbosExperiment* script should be executed in a place with JAVA_HOME set. This Tutorial meets this requirement by using nodes with the FC15RubOral image.  
-* Samples of Experiment XML files are available in the `/examples` directory in our [Github repository.](https://github.com/coc-gatech-newelba/NewElbaAlpha.git)  
+> **Notes:**  
+>
+> * Activating the experiment (i.e. "swapping it in") on *emulab* and logging into node1 is not a *strict dependency.* However, this path maximizes experiment generation success, since the known dependencies are respected.  
+> * The *runRubbosExperiment* script should be executed in a place with JAVA_HOME set. This Tutorial meets this requirement by using nodes with the FC15RubOral image.  
+> * Samples of Experiment XML files are available in the `/examples` directory in our [Github repository.](https://github.com/coc-gatech-newelba/NewElbaAlpha.git)  
 
 
 
