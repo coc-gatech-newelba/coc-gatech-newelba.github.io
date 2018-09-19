@@ -8,17 +8,17 @@ title: Linear Tutorial
 ### [Introduction](/docs/introduction-to-elba)  
 
 
-  1. Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval![EmulabElba](/img/emulabelba.png)  
+1. Create account on the Emulab cloud infrastructure at [_emulab.net_](http://www.emulab.net/index.php3) and wait for approval![EmulabElba](/img/emulabelba.png)  
 
-  2. Once approved for an account fill out your information- make note of the following two points:  
+2. Once approved for an account fill out your information- make note of the following two points:  
 
     1. When filling out information for your account ensure that you put “Infosphere” for both the group AND the project  
-	
+
     2. Select **bash** for your default shell  
 
-        > Note: if you forget to set your shell, you can set it after logging into Emulab and clicking the “Edit Profile” link  
+    > Note: if you forget to set your shell, you can set it after logging into Emulab and clicking the “Edit Profile” link  
 
-  3. Create a public RSA (SSH) key on your local ‘nix machine under a **bash** shell  
+3. Create a public RSA (SSH) key on your local ‘nix machine under a **bash** shell  
 
 
 ### [SSH Generation](/docs/ssh)  
@@ -147,19 +147,16 @@ The following _Steps_ walk through creating a "reservation" on one of the suppor
 	
   3. Complete the form as instructed. Please note the following **restrictions** for *Experiment Name*:  
 
-    > ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
+> ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
     
-    > Make note of this values as we will use this value later.  
+> Make note of this values as we will use this value later.  
 
   4. Provide an NSFile topology descriptor  
 
-    * You can use this [NSFile sample](/docs/nsfile/) to execute the Tutorial's 1-1-1-1 topology  
-    
-    * Copy and paste this sample's contents using your favorite 'nix editor, i.e. Sublime, Atom, Vim/emacs, or TextWrangler  
-
-    * This input file specifies the network topology, machine types and OS images for the experiment  
-
-    * For our experiment, the NSFile includes 10 nodes which correspond to the following configuration: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.  
+* You can use this [NSFile sample](/docs/nsfile/) to execute the Tutorial's 1-1-1-1 topology  
+* Copy and paste this sample's contents using your favorite 'nix editor, i.e. Sublime, Atom, Vim/emacs, or TextWrangler  
+* This input file specifies the network topology, machine types and OS images for the experiment  
+* For our experiment, the NSFile includes 10 nodes which correspond to the following configuration: 1 Control node, 1 Benchmark node, 4 Client node, 1 HTTPD node, 1 Tomcat node, 1 C-JDBC node, and 1 MySQL node.  
 
   5. Submit the form after providing all necessary information, including uploading the *NSFile*  
 
@@ -171,7 +168,7 @@ The following _Steps_ walk through creating a "reservation" on one of the suppor
 We use an XML file for describing an experiment. Its inputs help to define experiment artifacts--the output of our generator.  
 
 This XML file contains various environmental and experimental parameters, for example:  
-	
+
   1. username and groupname for executing the experiment  
 
   2. workload, i.e. number of concurrent user requests  
