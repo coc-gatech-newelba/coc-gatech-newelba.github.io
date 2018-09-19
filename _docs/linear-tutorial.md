@@ -147,9 +147,9 @@ The following _Steps_ walk through creating a "reservation" on one of the suppor
 
 3. Complete the form as instructed. Please note the following **restrictions** for *Experiment Name*:  
 
-    > Make note of this values as we will use this value later.  
-    
     > ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
+    > **Note:** This value will be used extensively throughout later portions of this tutorial.  
+
 
 4. Provide an NSFile topology descriptor  
 
@@ -233,9 +233,9 @@ We will now modify several default parameters prior to generating our experiment
             <param name="workload" value="1000"/>  
 
 > **Notes:**  
-
-* mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.  
-* This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial. See the section: [XML Configuration Parameters](/docs/xml-configuration-parameters/)  
+>
+> * mysqlReponseTime parameter should remain "false." The screencast accompanying these instructions sets this parameter incorrectly.  
+> * This file contains many additional parameters. A more complete description for most of them can be found at the end of the tutorial. See the section: [XML Configuration Parameters](/docs/xml-configuration-parameters/)  
 
 
 #### Step 3: Generate Experiment Scripts and Configuration using Experiment XML  
