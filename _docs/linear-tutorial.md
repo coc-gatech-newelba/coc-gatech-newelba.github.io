@@ -147,9 +147,9 @@ The following _Steps_ walk through creating a "reservation" on one of the suppor
 
 3. Complete the form as instructed. Please note the following **restrictions** for *Experiment Name*:  
 
-> ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
+    > ***Note: Experiment Name should only contain lowercase letters and/or numbers in the name. No spaces or special characters, including underscore ("_")***  
     
-> Make note of this values as we will use this value later.  
+    > Make note of this values as we will use this value later.  
 
 4. Provide an NSFile topology descriptor  
 
